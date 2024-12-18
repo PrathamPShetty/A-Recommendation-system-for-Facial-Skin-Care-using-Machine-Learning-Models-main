@@ -1,169 +1,89 @@
 import os
-from typing import List
+import logging
 import numpy as np
-import pandas as pd
-from PIL import Image
-import tensorflow as tf
+from fastapi import FastAPI, HTTPException, UploadFile, File
+from pydantic import BaseModel
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
-from tensorflow.keras.preprocessing.image import load_img
-from tensorflow.keras.preprocessing.image import img_to_array
-from models.skin_tone.skin_tone_knn import identify_skin_tone
-from flask import Flask, request
-from flask_restful import Api, Resource, reqparse
-import werkzeug
-from models.recommender.rec import recs_essentials, makeup_recommendation
-import base64
-from io import BytesIO
 from PIL import Image
-import tensorflow as tf
-from urllib.parse import quote as url_quote
+from io import BytesIO
+import base64
 
-app = Flask(__name__)
-api = Api(app)
+# Configure logging
+logging.basicConfig(
+    level=logging.DEBUG,  # Change to DEBUG for more verbose logs
+    format='%(asctime)s %(levelname)s: %(message)s',
+    datefmt='%Y-%m-%d %H:%M:%S',
+    handlers=[
+        logging.FileHandler("server.log"),
+        logging.StreamHandler()
+    ]
+)
+logger = logging.getLogger(__name__)
+
+# Initialize FastAPI app
+app = FastAPI()
 
 class_names1 = ['Dry_skin', 'Normal_skin', 'Oil_skin']
-class_names2 = ['Low', 'Moderate', 'Severe']
-skin_tone_dataset = 'models/skin_tone/skin_tone_dataset.csv'
 
-
+# Load the Keras model
 def get_model():
-    global model1, model2             
-  
-
-    model1 = tf.saved_model.load('./models/skin_model', include_optimizer=False)
-    print('Model 1 loaded')
-    model2 = tf.saved_model.load('./models/acne_model', include_optimizer=False)
-    print("Model 2 loaded!")
-
-
-def load_image(img_path):
-    img = image.load_img(img_path, target_size=(224, 224))
-    # (height, width, channels)
-    img_tensor = image.img_to_array(img)
-    # (1, height, width, channels), add a dimension because the model expects this shape: (batch_size, height, width, channels)
-    img_tensor = np.expand_dims(img_tensor, axis=0)
-    # imshow expects values in the range [0, 1]
-    img_tensor /= 255.
-    return img_tensor
-
-
-def prediction_skin(img_path):
-    new_image = load_image(img_path)
-    pred1 = model1.predict(new_image)
-    # print(pred1)
-    if len(pred1[0]) > 1:
-        pred_class1 = class_names1[tf.argmax(pred1[0])]
-    else:
-        pred_class1 = class_names1[int(tf.round(pred1[0]))]
-    return pred_class1
-
-
-def prediction_acne(img_path):
-    new_image = load_image(img_path)
-    pred2 = model2.predict(new_image)
-    # print(pred2)
-    if len(pred2[0]) > 1:
-        pred_class2 = class_names2[tf.argmax(pred2[0])]
-    else:
-        pred_class2 = class_names2[int(tf.round(pred2[0]))]
-    return pred_class2
-
+    global model
+    try:
+        model = load_model('./models/skin_type_classifier.h5')
+        logger.info('Model loaded successfully')
+    except Exception as e:
+        logger.error(f"Failed to load model: {e}")
 
 get_model()
 
+def load_image(img_path):
+    try:
+        img = image.load_img(img_path, target_size=(224, 224))
+        img_tensor = image.img_to_array(img)
+        img_tensor = np.expand_dims(img_tensor, axis=0)
+        img_tensor /= 255.0
+        logger.debug(f"Image loaded and preprocessed from path: {img_path}")
+        return img_tensor
+    except Exception as e:
+        logger.error(f"Error in loading and preprocessing image: {e}")
+        raise
 
-img_put_args = reqparse.RequestParser()
-img_put_args.add_argument(
-    "file", help="Please provide a valid image file", required=True)
+def prediction_skin(img_path):
+    try:
+        new_image = load_image(img_path)
+        pred1 = model.predict(new_image)
+        pred_class1 = class_names1[np.argmax(pred1[0])]
+        logger.info(f"Prediction made for image: {pred_class1}")
+        return pred_class1
+    except Exception as e:
+        logger.error(f"Prediction failed: {e}")
+        raise
 
+@app.post("/upload")
+async def upload_image(file: UploadFile = File(...)):
+    try:
+        logger.debug("Image file received in the POST request")
 
-rec_args = reqparse.RequestParser()
+        # Read and save the uploaded file
+        content = await file.read()
+        im = Image.open(BytesIO(content))
 
-rec_args.add_argument(
-    "tone", type=int, help="Argument required", required=True)
-rec_args.add_argument(
-    "type", type=str, help="Argument required", required=True)
-rec_args.add_argument("features", type=dict,
-                      help="Argument required", required=True)
-
-
-class Recommendation(Resource):
-    def put(self):
-        args = rec_args.parse_args()
-        print(args)
-        features = args['features']
-        tone = args['tone']
-        skin_type = args['type'].lower()
-        skin_tone = 'light to medium'
-        if tone <= 2:
-            skin_tone = 'fair to light'
-        elif tone >= 4:
-            skin_tone = 'medium to dark'
-        print(f"{skin_tone}, {skin_type}")
-        fv = []
-        for key, value in features.items():
-            # if key == 'skin type':
-            #     skin_type = key
-            # elif key == 'skin tone':
-            #     skin_tone = key
-            #     continue
-            fv.append(int(value))
-
-        general = recs_essentials(fv, None)
-
-        makeup = makeup_recommendation(skin_tone, skin_type)
-        return {'general': general, 'makeup': makeup}
-
-
-class SkinMetrics(Resource):
-    def put(self):
-        args = img_put_args.parse_args()
-        print()
-        print(args)
-        print()
-        file = args['file']
-        starter = file.find(',')
-        image_data = file[starter+1:]
-        print()
-        print(image_data)
-        print()
-        image_data = bytes(image_data, encoding="ascii")
-        im = Image.open(BytesIO(base64.b64decode(image_data+b'==')))
-
+        # Save the image
         filename = 'image.png'
         file_path = os.path.join('./static', filename)
+        os.makedirs('./static', exist_ok=True)
         im.save(file_path)
+        logger.info(f"Image saved at: {file_path}")
+
+        # Make prediction
         skin_type = prediction_skin(file_path).split('_')[0]
-        acne_type = prediction_acne(file_path)
-        tone = identify_skin_tone(file_path, dataset=skin_tone_dataset)
-        print(skin_type)
-        print(acne_type)
-        print(tone)
+        acne_type = "mild"  # Simulating for the demo
+        tone = "fair to light"
 
-        return {'type': skin_type, 'tone': str(tone), 'acne': acne_type}, 200
+        logger.info(f"Prediction response: Type: {skin_type}, Tone: {tone}, Acne: {acne_type}")
+        return {"type": skin_type, "tone": tone, "acne": acne_type}
 
-
-api.add_resource(SkinMetrics, "/upload")
-api.add_resource(Recommendation, "/recommend")
-
-
-# @app.route("/", methods=['GET', 'POST'])
-# def home():
-#     return render_template('home.html')
-
-# @app.route("/predict", methods = ['GET','POST'])
-# def predict():
-#     if request.method == 'POST':
-#         file = request.files['file']
-#         filename = file.filename
-#         file_path = os.path.join('./static',filename)                       #slashes should be handeled properly
-#         file.save(file_path)
-#         skin_type = prediction_skin(file_path)
-#         acne_type = prediction_acne(file_path)
-#         print(skin_type)
-#         print(acne_type)
-#         return skin_type, acne_type
-
-if __name__ == "__main__":
-    app.run(debug=False)
+    except Exception as e:
+        logger.error(f"Error processing the request: {e}")
+        raise HTTPException(status_code=500, detail="Error processing the image")

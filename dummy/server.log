@@ -1,0 +1,518 @@
+2024-12-18 12:22:52 DEBUG: Creating converter from 3 to 5
+2024-12-18 12:22:53 WARNING: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-12-18 12:22:53 INFO: Model loaded successfully.
+2024-12-18 12:25:18 DEBUG: Creating converter from 3 to 5
+2024-12-18 12:25:19 WARNING: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-12-18 12:25:19 INFO: Model loaded successfully.
+2024-12-18 12:28:04 DEBUG: Calling on_part_begin with no data
+2024-12-18 12:28:04 DEBUG: Calling on_header_field with data[54:73]
+2024-12-18 12:28:04 DEBUG: Calling on_header_value with data[75:135]
+2024-12-18 12:28:04 DEBUG: Calling on_header_end with no data
+2024-12-18 12:28:04 DEBUG: Calling on_header_field with data[137:149]
+2024-12-18 12:28:04 DEBUG: Calling on_header_value with data[151:161]
+2024-12-18 12:28:04 DEBUG: Calling on_header_end with no data
+2024-12-18 12:28:04 DEBUG: Calling on_headers_finished with no data
+2024-12-18 12:28:04 DEBUG: Calling on_part_data with data[0:131072]
+2024-12-18 12:28:04 DEBUG: Calling on_part_data with data[0:21897]
+2024-12-18 12:28:04 DEBUG: Calling on_part_end with no data
+2024-12-18 12:28:04 DEBUG: Calling on_end with no data
+2024-12-18 12:28:04 DEBUG: tag: ImageWidth (256) - type: short (3) - value: b'*\x03'
+2024-12-18 12:28:04 DEBUG: tag: ImageLength (257) - type: short (3) - value: b'Q\x02'
+2024-12-18 12:28:04 DEBUG: tag: BitsPerSample (258) - type: short (3) Tag Location: 46 - Data Location: 182 - value: b'\x08\x00\x08\x00\x08\x00'
+2024-12-18 12:28:04 DEBUG: tag: PhotometricInterpretation (262) - type: short (3) - value: b'\x02\x00'
+2024-12-18 12:28:04 DEBUG: tag: Make (271) - type: string (2) Tag Location: 70 - Data Location: 188 - value: b'NIKON CORPORATION\x00'
+2024-12-18 12:28:04 DEBUG: tag: Model (272) - type: string (2) Tag Location: 82 - Data Location: 206 - value: b'NIKON D3\x00'
+2024-12-18 12:28:04 DEBUG: tag: Orientation (274) - type: short (3) - value: b'\x01\x00'
+2024-12-18 12:28:04 DEBUG: tag: SamplesPerPixel (277) - type: short (3) - value: b'\x03\x00'
+2024-12-18 12:28:04 DEBUG: tag: XResolution (282) - type: rational (5) Tag Location: 118 - Data Location: 215 - value: b"\x00\x9f$\x00\x10'\x00\x00"
+2024-12-18 12:28:04 DEBUG: tag: YResolution (283) - type: rational (5) Tag Location: 130 - Data Location: 223 - value: b"\x00\x9f$\x00\x10'\x00\x00"
+2024-12-18 12:28:04 DEBUG: tag: ResolutionUnit (296) - type: short (3) - value: b'\x02\x00'
+2024-12-18 12:28:04 DEBUG: tag: Software (305) - type: string (2) Tag Location: 154 - Data Location: 231 - value: <table: 38 bytes>
+2024-12-18 12:28:04 DEBUG: tag: DateTime (306) - type: string (2) Tag Location: 166 - Data Location: 269 - value: b'2016:10:25 00:21:02\x00'
+2024-12-18 12:28:04 DEBUG: tag: ExifIFD (34665) - type: long (4) - value: b'$\x01\x00\x00'
+2024-12-18 12:28:31 DEBUG: Calling on_part_begin with no data
+2024-12-18 12:28:31 DEBUG: Calling on_header_field with data[54:73]
+2024-12-18 12:28:31 DEBUG: Calling on_header_value with data[75:135]
+2024-12-18 12:28:31 DEBUG: Calling on_header_end with no data
+2024-12-18 12:28:31 DEBUG: Calling on_header_field with data[137:149]
+2024-12-18 12:28:31 DEBUG: Calling on_header_value with data[151:161]
+2024-12-18 12:28:31 DEBUG: Calling on_header_end with no data
+2024-12-18 12:28:31 DEBUG: Calling on_headers_finished with no data
+2024-12-18 12:28:31 DEBUG: Calling on_part_data with data[165:65701]
+2024-12-18 12:28:31 DEBUG: Calling on_part_data with data[0:87433]
+2024-12-18 12:28:31 DEBUG: Calling on_part_end with no data
+2024-12-18 12:28:31 DEBUG: Calling on_end with no data
+2024-12-18 12:28:31 DEBUG: tag: ImageWidth (256) - type: short (3) - value: b'*\x03'
+2024-12-18 12:28:31 DEBUG: tag: ImageLength (257) - type: short (3) - value: b'Q\x02'
+2024-12-18 12:28:31 DEBUG: tag: BitsPerSample (258) - type: short (3) Tag Location: 46 - Data Location: 182 - value: b'\x08\x00\x08\x00\x08\x00'
+2024-12-18 12:28:31 DEBUG: tag: PhotometricInterpretation (262) - type: short (3) - value: b'\x02\x00'
+2024-12-18 12:28:31 DEBUG: tag: Make (271) - type: string (2) Tag Location: 70 - Data Location: 188 - value: b'NIKON CORPORATION\x00'
+2024-12-18 12:28:31 DEBUG: tag: Model (272) - type: string (2) Tag Location: 82 - Data Location: 206 - value: b'NIKON D3\x00'
+2024-12-18 12:28:31 DEBUG: tag: Orientation (274) - type: short (3) - value: b'\x01\x00'
+2024-12-18 12:28:31 DEBUG: tag: SamplesPerPixel (277) - type: short (3) - value: b'\x03\x00'
+2024-12-18 12:28:31 DEBUG: tag: XResolution (282) - type: rational (5) Tag Location: 118 - Data Location: 215 - value: b"\x00\x9f$\x00\x10'\x00\x00"
+2024-12-18 12:28:31 DEBUG: tag: YResolution (283) - type: rational (5) Tag Location: 130 - Data Location: 223 - value: b"\x00\x9f$\x00\x10'\x00\x00"
+2024-12-18 12:28:31 DEBUG: tag: ResolutionUnit (296) - type: short (3) - value: b'\x02\x00'
+2024-12-18 12:28:31 DEBUG: tag: Software (305) - type: string (2) Tag Location: 154 - Data Location: 231 - value: <table: 38 bytes>
+2024-12-18 12:28:31 DEBUG: tag: DateTime (306) - type: string (2) Tag Location: 166 - Data Location: 269 - value: b'2016:10:25 00:21:02\x00'
+2024-12-18 12:28:31 DEBUG: tag: ExifIFD (34665) - type: long (4) - value: b'$\x01\x00\x00'
+2024-12-18 12:28:39 DEBUG: Creating converter from 3 to 5
+2024-12-18 12:28:41 WARNING: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-12-18 12:28:41 INFO: Model loaded successfully.
+2024-12-18 12:28:41 DEBUG: Calling on_part_begin with no data
+2024-12-18 12:28:41 DEBUG: Calling on_header_field with data[54:73]
+2024-12-18 12:28:41 DEBUG: Calling on_header_value with data[75:135]
+2024-12-18 12:28:41 DEBUG: Calling on_header_end with no data
+2024-12-18 12:28:41 DEBUG: Calling on_header_field with data[137:149]
+2024-12-18 12:28:41 DEBUG: Calling on_header_value with data[151:161]
+2024-12-18 12:28:41 DEBUG: Calling on_header_end with no data
+2024-12-18 12:28:41 DEBUG: Calling on_headers_finished with no data
+2024-12-18 12:28:41 DEBUG: Calling on_part_data with data[165:153134]
+2024-12-18 12:28:41 DEBUG: Calling on_part_end with no data
+2024-12-18 12:28:41 DEBUG: Calling on_end with no data
+2024-12-18 12:28:41 DEBUG: Image file received in the POST request
+2024-12-18 12:28:41 DEBUG: tag: ImageWidth (256) - type: short (3) - value: b'*\x03'
+2024-12-18 12:28:41 DEBUG: tag: ImageLength (257) - type: short (3) - value: b'Q\x02'
+2024-12-18 12:28:41 DEBUG: tag: BitsPerSample (258) - type: short (3) Tag Location: 46 - Data Location: 182 - value: b'\x08\x00\x08\x00\x08\x00'
+2024-12-18 12:28:41 DEBUG: tag: PhotometricInterpretation (262) - type: short (3) - value: b'\x02\x00'
+2024-12-18 12:28:41 DEBUG: tag: Make (271) - type: string (2) Tag Location: 70 - Data Location: 188 - value: b'NIKON CORPORATION\x00'
+2024-12-18 12:28:41 DEBUG: tag: Model (272) - type: string (2) Tag Location: 82 - Data Location: 206 - value: b'NIKON D3\x00'
+2024-12-18 12:28:41 DEBUG: tag: Orientation (274) - type: short (3) - value: b'\x01\x00'
+2024-12-18 12:28:41 DEBUG: tag: SamplesPerPixel (277) - type: short (3) - value: b'\x03\x00'
+2024-12-18 12:28:41 DEBUG: tag: XResolution (282) - type: rational (5) Tag Location: 118 - Data Location: 215 - value: b"\x00\x9f$\x00\x10'\x00\x00"
+2024-12-18 12:28:41 DEBUG: tag: YResolution (283) - type: rational (5) Tag Location: 130 - Data Location: 223 - value: b"\x00\x9f$\x00\x10'\x00\x00"
+2024-12-18 12:28:41 DEBUG: tag: ResolutionUnit (296) - type: short (3) - value: b'\x02\x00'
+2024-12-18 12:28:41 DEBUG: tag: Software (305) - type: string (2) Tag Location: 154 - Data Location: 231 - value: <table: 38 bytes>
+2024-12-18 12:28:41 DEBUG: tag: DateTime (306) - type: string (2) Tag Location: 166 - Data Location: 269 - value: b'2016:10:25 00:21:02\x00'
+2024-12-18 12:28:41 DEBUG: tag: ExifIFD (34665) - type: long (4) - value: b'$\x01\x00\x00'
+2024-12-18 12:28:41 INFO: Image saved at: ./static\image.png
+2024-12-18 12:28:41 DEBUG: STREAM b'IHDR' 16 13
+2024-12-18 12:28:41 DEBUG: STREAM b'iCCP' 41 2609
+2024-12-18 12:28:41 DEBUG: iCCP profile name b'ICC Profile'
+2024-12-18 12:28:41 DEBUG: Compression method 0
+2024-12-18 12:28:41 DEBUG: STREAM b'IDAT' 2662 65536
+2024-12-18 12:28:41 DEBUG: Image loaded and preprocessed from path: ./static\image.png
+2024-12-18 12:28:43 INFO: Prediction made for image: Normal_skin
+2024-12-18 12:28:43 INFO: Prediction response: Type: Normal, Tone: fair to light, Acne: mild
+2024-12-18 12:29:02 DEBUG: Calling on_part_begin with no data
+2024-12-18 12:29:02 DEBUG: Calling on_header_field with data[54:73]
+2024-12-18 12:29:02 DEBUG: Calling on_header_value with data[75:160]
+2024-12-18 12:29:02 DEBUG: Calling on_header_end with no data
+2024-12-18 12:29:02 DEBUG: Calling on_header_field with data[162:174]
+2024-12-18 12:29:02 DEBUG: Calling on_header_value with data[176:186]
+2024-12-18 12:29:02 DEBUG: Calling on_header_end with no data
+2024-12-18 12:29:02 DEBUG: Calling on_headers_finished with no data
+2024-12-18 12:29:02 DEBUG: Calling on_part_data with data[0:187648]
+2024-12-18 12:29:02 DEBUG: Calling on_part_end with no data
+2024-12-18 12:29:02 DEBUG: Calling on_end with no data
+2024-12-18 12:29:02 DEBUG: Image file received in the POST request
+2024-12-18 12:29:03 INFO: Image saved at: ./static\image.png
+2024-12-18 12:29:03 DEBUG: STREAM b'IHDR' 16 13
+2024-12-18 12:29:03 DEBUG: STREAM b'IDAT' 41 65536
+2024-12-18 12:29:03 DEBUG: Image loaded and preprocessed from path: ./static\image.png
+2024-12-18 12:29:03 INFO: Prediction made for image: Dry_skin
+2024-12-18 12:29:03 INFO: Prediction response: Type: Dry, Tone: fair to light, Acne: mild
+2024-12-18 12:31:11 DEBUG: Calling on_part_begin with no data
+2024-12-18 12:31:11 DEBUG: Calling on_header_field with data[54:73]
+2024-12-18 12:31:11 DEBUG: Calling on_header_value with data[75:133]
+2024-12-18 12:31:11 DEBUG: Calling on_header_end with no data
+2024-12-18 12:31:11 DEBUG: Calling on_header_field with data[135:147]
+2024-12-18 12:31:11 DEBUG: Calling on_header_value with data[149:159]
+2024-12-18 12:31:11 DEBUG: Calling on_header_end with no data
+2024-12-18 12:31:11 DEBUG: Calling on_headers_finished with no data
+2024-12-18 12:31:11 DEBUG: Calling on_part_data with data[0:262144]
+2024-12-18 12:31:11 DEBUG: Calling on_part_data with data[0:196608]
+2024-12-18 12:31:11 DEBUG: Calling on_part_data with data[0:131072]
+2024-12-18 12:31:11 DEBUG: Calling on_part_data with data[0:131072]
+2024-12-18 12:31:11 DEBUG: Calling on_part_data with data[0:131072]
+2024-12-18 12:31:11 DEBUG: Calling on_part_data with data[0:196608]
+2024-12-18 12:31:11 DEBUG: Calling on_part_data with data[0:196608]
+2024-12-18 12:31:11 DEBUG: Calling on_part_data with data[0:262144]
+2024-12-18 12:31:11 DEBUG: Calling on_part_data with data[0:262144]
+2024-12-18 12:31:11 DEBUG: Calling on_part_data with data[0:262144]
+2024-12-18 12:31:11 DEBUG: Calling on_part_data with data[0:262144]
+2024-12-18 12:31:11 DEBUG: Calling on_part_data with data[0:262144]
+2024-12-18 12:31:11 DEBUG: Calling on_part_data with data[0:262144]
+2024-12-18 12:31:11 DEBUG: Calling on_part_data with data[0:262144]
+2024-12-18 12:31:11 DEBUG: Calling on_part_data with data[0:262144]
+2024-12-18 12:31:11 DEBUG: Calling on_part_data with data[0:262144]
+2024-12-18 12:31:11 DEBUG: Calling on_part_data with data[0:145930]
+2024-12-18 12:31:11 DEBUG: Calling on_part_end with no data
+2024-12-18 12:31:11 DEBUG: Calling on_end with no data
+2024-12-18 12:31:11 DEBUG: Image file received in the POST request
+2024-12-18 12:31:11 DEBUG: tag: unknown (39321) - type: string (2) Tag Location: 22 - Data Location: 206 - value: <table: 131 bytes>
+2024-12-18 12:31:12 DEBUG: tag: unknown (34970) - type: byte (1) - value: b'\x00'
+2024-12-18 12:31:12 DEBUG: tag: ImageLength (257) - type: long (4) - value: b'\xf0\x0f\x00\x00'
+2024-12-18 12:31:12 DEBUG: tag: Make (271) - type: string (2) Tag Location: 58 - Data Location: 337 - value: b'Xiaomi\x00'
+2024-12-18 12:31:12 DEBUG: tag: Orientation (274) - type: short (3) - value: b'\x01\x00'
+2024-12-18 12:31:12 DEBUG: tag: DateTime (306) - type: string (2) Tag Location: 82 - Data Location: 344 - value: b'2024:12:18 12:29:34\x00'
+2024-12-18 12:31:12 DEBUG: tag: YResolution (283) - type: rational (5) Tag Location: 94 - Data Location: 364 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+2024-12-18 12:31:12 DEBUG: tag: XResolution (282) - type: rational (5) Tag Location: 106 - Data Location: 372 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+2024-12-18 12:31:12 DEBUG: tag: ImageWidth (256) - type: long (4) - value: b'\x00\x0c\x00\x00'
+2024-12-18 12:31:12 DEBUG: tag: Model (272) - type: string (2) Tag Location: 130 - Data Location: 380 - value: b'22071219AI\x00'
+2024-12-18 12:31:12 DEBUG: tag: Software (305) - type: string (2) Tag Location: 142 - Data Location: 391 - value: b'MediaTek Camera Application\x00\x00\x00\x00\x00'
+2024-12-18 12:31:12 DEBUG: tag: ImageDescription (270) - type: string (2) Tag Location: 154 - Data Location: 423 - value: b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+2024-12-18 12:31:12 DEBUG: tag: YCbCrPositioning (531) - type: short (3) - value: b'\x02\x00'
+2024-12-18 12:31:12 DEBUG: tag: ExifIFD (34665) - type: long (4) - value: b'\xd6\x01\x00\x00'
+2024-12-18 12:31:12 DEBUG: tag: ResolutionUnit (296) - type: short (3) - value: b'\x02\x00'
+2024-12-18 12:31:12 DEBUG: tag: unknown (39424) - type: string (2) Tag Location: 202 - Data Location: 455 - value: b'Redmi 11 Prime\x00'
+2024-12-18 12:31:23 DEBUG: Creating converter from 3 to 5
+2024-12-18 12:31:24 WARNING: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-12-18 12:31:24 INFO: Model loaded successfully.
+2024-12-18 12:31:24 DEBUG: Calling on_part_begin with no data
+2024-12-18 12:31:24 DEBUG: Calling on_header_field with data[54:73]
+2024-12-18 12:31:24 DEBUG: Calling on_header_value with data[75:133]
+2024-12-18 12:31:24 DEBUG: Calling on_header_end with no data
+2024-12-18 12:31:24 DEBUG: Calling on_header_field with data[135:147]
+2024-12-18 12:31:24 DEBUG: Calling on_header_value with data[149:159]
+2024-12-18 12:31:24 DEBUG: Calling on_header_end with no data
+2024-12-18 12:31:24 DEBUG: Calling on_headers_finished with no data
+2024-12-18 12:31:24 DEBUG: Calling on_part_data with data[163:261763]
+2024-12-18 12:31:24 DEBUG: Calling on_part_data with data[0:66080]
+2024-12-18 12:31:26 DEBUG: Calling on_part_begin with no data
+2024-12-18 12:31:26 DEBUG: Calling on_header_field with data[54:73]
+2024-12-18 12:31:26 DEBUG: Calling on_header_value with data[75:133]
+2024-12-18 12:31:26 DEBUG: Calling on_header_end with no data
+2024-12-18 12:31:26 DEBUG: Calling on_header_field with data[135:147]
+2024-12-18 12:31:26 DEBUG: Calling on_header_value with data[149:159]
+2024-12-18 12:31:26 DEBUG: Calling on_header_end with no data
+2024-12-18 12:31:26 DEBUG: Calling on_headers_finished with no data
+2024-12-18 12:31:26 DEBUG: Calling on_part_data with data[0:262144]
+2024-12-18 12:31:26 DEBUG: Calling on_part_data with data[0:262144]
+2024-12-18 12:31:26 DEBUG: Calling on_part_data with data[0:65536]
+2024-12-18 12:31:26 DEBUG: Calling on_part_data with data[0:131072]
+2024-12-18 12:31:26 DEBUG: Calling on_part_data with data[0:262144]
+2024-12-18 12:31:26 DEBUG: Calling on_part_data with data[0:262144]
+2024-12-18 12:31:26 DEBUG: Calling on_part_data with data[0:262144]
+2024-12-18 12:31:26 DEBUG: Calling on_part_data with data[0:262144]
+2024-12-18 12:31:26 DEBUG: Calling on_part_data with data[0:262144]
+2024-12-18 12:31:26 DEBUG: Calling on_part_data with data[0:262144]
+2024-12-18 12:31:26 DEBUG: Calling on_part_data with data[0:262144]
+2024-12-18 12:31:26 DEBUG: Calling on_part_data with data[0:262144]
+2024-12-18 12:31:26 DEBUG: Calling on_part_data with data[0:262144]
+2024-12-18 12:31:26 DEBUG: Calling on_part_data with data[0:262144]
+2024-12-18 12:31:26 DEBUG: Calling on_part_data with data[0:262144]
+2024-12-18 12:31:26 DEBUG: Calling on_part_data with data[0:145930]
+2024-12-18 12:31:26 DEBUG: Calling on_part_end with no data
+2024-12-18 12:31:26 DEBUG: Calling on_end with no data
+2024-12-18 12:31:26 DEBUG: Image file received in the POST request
+2024-12-18 12:31:26 DEBUG: tag: unknown (39321) - type: string (2) Tag Location: 22 - Data Location: 206 - value: <table: 131 bytes>
+2024-12-18 12:31:26 DEBUG: tag: unknown (34970) - type: byte (1) - value: b'\x00'
+2024-12-18 12:31:26 DEBUG: tag: ImageLength (257) - type: long (4) - value: b'\xf0\x0f\x00\x00'
+2024-12-18 12:31:26 DEBUG: tag: Make (271) - type: string (2) Tag Location: 58 - Data Location: 337 - value: b'Xiaomi\x00'
+2024-12-18 12:31:26 DEBUG: tag: Orientation (274) - type: short (3) - value: b'\x01\x00'
+2024-12-18 12:31:26 DEBUG: tag: DateTime (306) - type: string (2) Tag Location: 82 - Data Location: 344 - value: b'2024:12:18 12:29:34\x00'
+2024-12-18 12:31:26 DEBUG: tag: YResolution (283) - type: rational (5) Tag Location: 94 - Data Location: 364 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+2024-12-18 12:31:26 DEBUG: tag: XResolution (282) - type: rational (5) Tag Location: 106 - Data Location: 372 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+2024-12-18 12:31:26 DEBUG: tag: ImageWidth (256) - type: long (4) - value: b'\x00\x0c\x00\x00'
+2024-12-18 12:31:26 DEBUG: tag: Model (272) - type: string (2) Tag Location: 130 - Data Location: 380 - value: b'22071219AI\x00'
+2024-12-18 12:31:26 DEBUG: tag: Software (305) - type: string (2) Tag Location: 142 - Data Location: 391 - value: b'MediaTek Camera Application\x00\x00\x00\x00\x00'
+2024-12-18 12:31:26 DEBUG: tag: ImageDescription (270) - type: string (2) Tag Location: 154 - Data Location: 423 - value: b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+2024-12-18 12:31:26 DEBUG: tag: YCbCrPositioning (531) - type: short (3) - value: b'\x02\x00'
+2024-12-18 12:31:26 DEBUG: tag: ExifIFD (34665) - type: long (4) - value: b'\xd6\x01\x00\x00'
+2024-12-18 12:31:26 DEBUG: tag: ResolutionUnit (296) - type: short (3) - value: b'\x02\x00'
+2024-12-18 12:31:26 DEBUG: tag: unknown (39424) - type: string (2) Tag Location: 202 - Data Location: 455 - value: b'Redmi 11 Prime\x00'
+2024-12-18 12:31:30 INFO: Image saved at: ./static\image.png
+2024-12-18 12:31:30 DEBUG: STREAM b'IHDR' 16 13
+2024-12-18 12:31:30 DEBUG: STREAM b'IDAT' 41 65536
+2024-12-18 12:31:30 DEBUG: Image loaded and preprocessed from path: ./static\image.png
+2024-12-18 12:31:33 INFO: Prediction made for image: Dry_skin
+2024-12-18 12:31:33 INFO: Prediction response: Type: Dry
+2024-12-18 12:32:04 DEBUG: Calling on_part_begin with no data
+2024-12-18 12:32:04 DEBUG: Calling on_header_field with data[54:73]
+2024-12-18 12:32:04 DEBUG: Calling on_header_value with data[75:133]
+2024-12-18 12:32:04 DEBUG: Calling on_header_end with no data
+2024-12-18 12:32:04 DEBUG: Calling on_header_field with data[135:147]
+2024-12-18 12:32:04 DEBUG: Calling on_header_value with data[149:159]
+2024-12-18 12:32:04 DEBUG: Calling on_header_end with no data
+2024-12-18 12:32:04 DEBUG: Calling on_headers_finished with no data
+2024-12-18 12:32:04 DEBUG: Calling on_part_data with data[163:65699]
+2024-12-18 12:32:04 DEBUG: Calling on_part_data with data[0:262144]
+2024-12-18 12:32:04 DEBUG: Calling on_part_data with data[0:262144]
+2024-12-18 12:32:04 DEBUG: Calling on_part_data with data[0:131072]
+2024-12-18 12:32:04 DEBUG: Calling on_part_data with data[0:196608]
+2024-12-18 12:32:04 DEBUG: Calling on_part_data with data[0:131072]
+2024-12-18 12:32:04 DEBUG: Calling on_part_data with data[0:196608]
+2024-12-18 12:32:04 DEBUG: Calling on_part_data with data[0:262144]
+2024-12-18 12:32:04 DEBUG: Calling on_part_data with data[0:262144]
+2024-12-18 12:32:04 DEBUG: Calling on_part_data with data[0:262144]
+2024-12-18 12:32:04 DEBUG: Calling on_part_data with data[0:262144]
+2024-12-18 12:32:04 DEBUG: Calling on_part_data with data[0:262144]
+2024-12-18 12:32:04 DEBUG: Calling on_part_data with data[0:262144]
+2024-12-18 12:32:04 DEBUG: Calling on_part_data with data[0:262144]
+2024-12-18 12:32:04 DEBUG: Calling on_part_data with data[0:262144]
+2024-12-18 12:32:04 DEBUG: Calling on_part_data with data[0:262144]
+2024-12-18 12:32:04 DEBUG: Calling on_part_data with data[0:135431]
+2024-12-18 12:32:04 DEBUG: Calling on_part_end with no data
+2024-12-18 12:32:04 DEBUG: Calling on_end with no data
+2024-12-18 12:32:04 DEBUG: Image file received in the POST request
+2024-12-18 12:32:04 DEBUG: tag: unknown (39321) - type: string (2) Tag Location: 22 - Data Location: 206 - value: <table: 131 bytes>
+2024-12-18 12:32:04 DEBUG: tag: unknown (34970) - type: byte (1) - value: b'\x00'
+2024-12-18 12:32:04 DEBUG: tag: ImageLength (257) - type: long (4) - value: b'\xf0\x0f\x00\x00'
+2024-12-18 12:32:04 DEBUG: tag: Make (271) - type: string (2) Tag Location: 58 - Data Location: 337 - value: b'Xiaomi\x00'
+2024-12-18 12:32:04 DEBUG: tag: Orientation (274) - type: short (3) - value: b'\x01\x00'
+2024-12-18 12:32:04 DEBUG: tag: DateTime (306) - type: string (2) Tag Location: 82 - Data Location: 344 - value: b'2024:12:18 12:29:42\x00'
+2024-12-18 12:32:04 DEBUG: tag: YResolution (283) - type: rational (5) Tag Location: 94 - Data Location: 364 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+2024-12-18 12:32:04 DEBUG: tag: XResolution (282) - type: rational (5) Tag Location: 106 - Data Location: 372 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+2024-12-18 12:32:04 DEBUG: tag: ImageWidth (256) - type: long (4) - value: b'\x00\x0c\x00\x00'
+2024-12-18 12:32:04 DEBUG: tag: Model (272) - type: string (2) Tag Location: 130 - Data Location: 380 - value: b'22071219AI\x00'
+2024-12-18 12:32:04 DEBUG: tag: Software (305) - type: string (2) Tag Location: 142 - Data Location: 391 - value: b'MediaTek Camera Application\x00\x00\x00\x00\x00'
+2024-12-18 12:32:04 DEBUG: tag: ImageDescription (270) - type: string (2) Tag Location: 154 - Data Location: 423 - value: b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+2024-12-18 12:32:04 DEBUG: tag: YCbCrPositioning (531) - type: short (3) - value: b'\x02\x00'
+2024-12-18 12:32:04 DEBUG: tag: ExifIFD (34665) - type: long (4) - value: b'\xd6\x01\x00\x00'
+2024-12-18 12:32:04 DEBUG: tag: ResolutionUnit (296) - type: short (3) - value: b'\x02\x00'
+2024-12-18 12:32:04 DEBUG: tag: unknown (39424) - type: string (2) Tag Location: 202 - Data Location: 455 - value: b'Redmi 11 Prime\x00'
+2024-12-18 12:32:12 INFO: Image saved at: ./static\image.png
+2024-12-18 12:32:12 DEBUG: STREAM b'IHDR' 16 13
+2024-12-18 12:32:12 DEBUG: STREAM b'IDAT' 41 65536
+2024-12-18 12:32:13 DEBUG: Image loaded and preprocessed from path: ./static\image.png
+2024-12-18 12:32:14 INFO: Prediction made for image: Dry_skin
+2024-12-18 12:32:14 INFO: Prediction response: Type: Dry
+2024-12-18 12:33:07 DEBUG: Calling on_part_begin with no data
+2024-12-18 12:33:07 DEBUG: Calling on_header_field with data[54:73]
+2024-12-18 12:33:07 DEBUG: Calling on_header_value with data[75:118]
+2024-12-18 12:33:07 DEBUG: Calling on_header_end with no data
+2024-12-18 12:33:07 DEBUG: Calling on_header_field with data[120:132]
+2024-12-18 12:33:07 DEBUG: Calling on_header_value with data[134:144]
+2024-12-18 12:33:07 DEBUG: Calling on_header_end with no data
+2024-12-18 12:33:07 DEBUG: Calling on_headers_finished with no data
+2024-12-18 12:33:07 DEBUG: Calling on_part_data with data[0:70273]
+2024-12-18 12:33:07 DEBUG: Calling on_part_end with no data
+2024-12-18 12:33:07 DEBUG: Calling on_end with no data
+2024-12-18 12:33:07 DEBUG: Image file received in the POST request
+2024-12-18 12:33:07 INFO: Image saved at: ./static\image.png
+2024-12-18 12:33:07 DEBUG: STREAM b'IHDR' 16 13
+2024-12-18 12:33:07 DEBUG: STREAM b'iCCP' 41 284
+2024-12-18 12:33:07 DEBUG: iCCP profile name b'ICC Profile'
+2024-12-18 12:33:07 DEBUG: Compression method 0
+2024-12-18 12:33:07 DEBUG: STREAM b'IDAT' 337 65536
+2024-12-18 12:33:07 DEBUG: Image loaded and preprocessed from path: ./static\image.png
+2024-12-18 12:33:07 INFO: Prediction made for image: Oil_skin
+2024-12-18 12:33:07 INFO: Prediction response: Type: Oil
+2024-12-18 12:33:44 DEBUG: Calling on_part_begin with no data
+2024-12-18 12:33:44 DEBUG: Calling on_header_field with data[54:73]
+2024-12-18 12:33:44 DEBUG: Calling on_header_value with data[75:133]
+2024-12-18 12:33:44 DEBUG: Calling on_header_end with no data
+2024-12-18 12:33:44 DEBUG: Calling on_header_field with data[135:147]
+2024-12-18 12:33:44 DEBUG: Calling on_header_value with data[149:159]
+2024-12-18 12:33:44 DEBUG: Calling on_header_end with no data
+2024-12-18 12:33:44 DEBUG: Calling on_headers_finished with no data
+2024-12-18 12:33:44 DEBUG: Calling on_part_data with data[0:262144]
+2024-12-18 12:33:44 DEBUG: Calling on_part_data with data[0:262144]
+2024-12-18 12:33:44 DEBUG: Calling on_part_data with data[0:84217]
+2024-12-18 12:33:44 DEBUG: Calling on_part_end with no data
+2024-12-18 12:33:44 DEBUG: Calling on_end with no data
+2024-12-18 12:33:44 DEBUG: Image file received in the POST request
+2024-12-18 12:33:44 DEBUG: tag: unknown (39321) - type: string (2) Tag Location: 22 - Data Location: 206 - value: <table: 132 bytes>
+2024-12-18 12:33:44 DEBUG: tag: unknown (34970) - type: byte (1) - value: b'\x00'
+2024-12-18 12:33:44 DEBUG: tag: ImageLength (257) - type: long (4) - value: b' \n\x00\x00'
+2024-12-18 12:33:44 DEBUG: tag: Make (271) - type: string (2) Tag Location: 58 - Data Location: 338 - value: b'Xiaomi\x00'
+2024-12-18 12:33:44 DEBUG: tag: Orientation (274) - type: short (3) - value: b'\x01\x00'
+2024-12-18 12:33:44 DEBUG: tag: DateTime (306) - type: string (2) Tag Location: 82 - Data Location: 345 - value: b'2024:12:17 22:09:42\x00'
+2024-12-18 12:33:44 DEBUG: tag: YResolution (283) - type: rational (5) Tag Location: 94 - Data Location: 365 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+2024-12-18 12:33:44 DEBUG: tag: XResolution (282) - type: rational (5) Tag Location: 106 - Data Location: 373 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+2024-12-18 12:33:44 DEBUG: tag: ImageWidth (256) - type: long (4) - value: b'\x90\x04\x00\x00'
+2024-12-18 12:33:44 DEBUG: tag: Model (272) - type: string (2) Tag Location: 130 - Data Location: 381 - value: b'23124RN87I\x00'
+2024-12-18 12:33:44 DEBUG: tag: Software (305) - type: string (2) Tag Location: 142 - Data Location: 392 - value: b'MediaTek Camera Application\x00\x00\x00\x00\x00'
+2024-12-18 12:33:44 DEBUG: tag: ImageDescription (270) - type: string (2) Tag Location: 154 - Data Location: 424 - value: b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+2024-12-18 12:33:44 DEBUG: tag: YCbCrPositioning (531) - type: short (3) - value: b'\x02\x00'
+2024-12-18 12:33:44 DEBUG: tag: ExifIFD (34665) - type: long (4) - value: b'\xd5\x01\x00\x00'
+2024-12-18 12:33:44 DEBUG: tag: ResolutionUnit (296) - type: short (3) - value: b'\x02\x00'
+2024-12-18 12:33:44 DEBUG: tag: unknown (39424) - type: string (2) Tag Location: 202 - Data Location: 456 - value: b'Redmi 13C 5G\x00'
+2024-12-18 12:33:45 INFO: Image saved at: ./static\image.png
+2024-12-18 12:33:45 DEBUG: STREAM b'IHDR' 16 13
+2024-12-18 12:33:45 DEBUG: STREAM b'IDAT' 41 65536
+2024-12-18 12:33:45 DEBUG: Image loaded and preprocessed from path: ./static\image.png
+2024-12-18 12:33:46 INFO: Prediction made for image: Normal_skin
+2024-12-18 12:33:46 INFO: Prediction response: Type: Normal
+2024-12-18 12:35:10 DEBUG: Calling on_part_begin with no data
+2024-12-18 12:35:10 DEBUG: Calling on_header_field with data[54:73]
+2024-12-18 12:35:10 DEBUG: Calling on_header_value with data[75:133]
+2024-12-18 12:35:10 DEBUG: Calling on_header_end with no data
+2024-12-18 12:35:10 DEBUG: Calling on_header_field with data[135:147]
+2024-12-18 12:35:10 DEBUG: Calling on_header_value with data[149:159]
+2024-12-18 12:35:10 DEBUG: Calling on_header_end with no data
+2024-12-18 12:35:10 DEBUG: Calling on_headers_finished with no data
+2024-12-18 12:35:10 DEBUG: Calling on_part_data with data[0:262144]
+2024-12-18 12:35:10 DEBUG: Calling on_part_data with data[0:262144]
+2024-12-18 12:35:10 DEBUG: Calling on_part_data with data[0:84217]
+2024-12-18 12:35:10 DEBUG: Calling on_part_end with no data
+2024-12-18 12:35:10 DEBUG: Calling on_end with no data
+2024-12-18 12:35:10 DEBUG: Image file received in the POST request
+2024-12-18 12:35:10 DEBUG: tag: unknown (39321) - type: string (2) Tag Location: 22 - Data Location: 206 - value: <table: 132 bytes>
+2024-12-18 12:35:10 DEBUG: tag: unknown (34970) - type: byte (1) - value: b'\x00'
+2024-12-18 12:35:10 DEBUG: tag: ImageLength (257) - type: long (4) - value: b' \n\x00\x00'
+2024-12-18 12:35:10 DEBUG: tag: Make (271) - type: string (2) Tag Location: 58 - Data Location: 338 - value: b'Xiaomi\x00'
+2024-12-18 12:35:10 DEBUG: tag: Orientation (274) - type: short (3) - value: b'\x01\x00'
+2024-12-18 12:35:10 DEBUG: tag: DateTime (306) - type: string (2) Tag Location: 82 - Data Location: 345 - value: b'2024:12:17 22:09:42\x00'
+2024-12-18 12:35:10 DEBUG: tag: YResolution (283) - type: rational (5) Tag Location: 94 - Data Location: 365 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+2024-12-18 12:35:10 DEBUG: tag: XResolution (282) - type: rational (5) Tag Location: 106 - Data Location: 373 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+2024-12-18 12:35:10 DEBUG: tag: ImageWidth (256) - type: long (4) - value: b'\x90\x04\x00\x00'
+2024-12-18 12:35:10 DEBUG: tag: Model (272) - type: string (2) Tag Location: 130 - Data Location: 381 - value: b'23124RN87I\x00'
+2024-12-18 12:35:10 DEBUG: tag: Software (305) - type: string (2) Tag Location: 142 - Data Location: 392 - value: b'MediaTek Camera Application\x00\x00\x00\x00\x00'
+2024-12-18 12:35:10 DEBUG: tag: ImageDescription (270) - type: string (2) Tag Location: 154 - Data Location: 424 - value: b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+2024-12-18 12:35:10 DEBUG: tag: YCbCrPositioning (531) - type: short (3) - value: b'\x02\x00'
+2024-12-18 12:35:10 DEBUG: tag: ExifIFD (34665) - type: long (4) - value: b'\xd5\x01\x00\x00'
+2024-12-18 12:35:10 DEBUG: tag: ResolutionUnit (296) - type: short (3) - value: b'\x02\x00'
+2024-12-18 12:35:10 DEBUG: tag: unknown (39424) - type: string (2) Tag Location: 202 - Data Location: 456 - value: b'Redmi 13C 5G\x00'
+2024-12-18 12:35:12 INFO: Image saved at: ./static\image.png
+2024-12-18 12:35:12 DEBUG: STREAM b'IHDR' 16 13
+2024-12-18 12:35:12 DEBUG: STREAM b'IDAT' 41 65536
+2024-12-18 12:35:12 DEBUG: Image loaded and preprocessed from path: ./static\image.png
+2024-12-18 12:35:12 INFO: Prediction made for image: Normal_skin
+2024-12-18 12:35:12 INFO: Prediction response: Type: Normal
+2024-12-18 12:35:25 DEBUG: Calling on_part_begin with no data
+2024-12-18 12:35:25 DEBUG: Calling on_header_field with data[54:73]
+2024-12-18 12:35:25 DEBUG: Calling on_header_value with data[75:133]
+2024-12-18 12:35:25 DEBUG: Calling on_header_end with no data
+2024-12-18 12:35:25 DEBUG: Calling on_header_field with data[135:147]
+2024-12-18 12:35:25 DEBUG: Calling on_header_value with data[149:159]
+2024-12-18 12:35:25 DEBUG: Calling on_header_end with no data
+2024-12-18 12:35:25 DEBUG: Calling on_headers_finished with no data
+2024-12-18 12:35:25 DEBUG: Calling on_part_data with data[0:262144]
+2024-12-18 12:35:25 DEBUG: Calling on_part_data with data[0:262144]
+2024-12-18 12:35:25 DEBUG: Calling on_part_data with data[0:84217]
+2024-12-18 12:35:25 DEBUG: Calling on_part_end with no data
+2024-12-18 12:35:25 DEBUG: Calling on_part_begin with no data
+2024-12-18 12:35:25 DEBUG: Calling on_header_field with data[84273:84292]
+2024-12-18 12:35:25 DEBUG: Calling on_header_value with data[84294:84352]
+2024-12-18 12:35:25 DEBUG: Calling on_header_end with no data
+2024-12-18 12:35:25 DEBUG: Calling on_header_field with data[84354:84366]
+2024-12-18 12:35:25 DEBUG: Calling on_header_value with data[84368:84378]
+2024-12-18 12:35:25 DEBUG: Calling on_header_end with no data
+2024-12-18 12:35:25 DEBUG: Calling on_headers_finished with no data
+2024-12-18 12:35:25 DEBUG: Calling on_part_data with data[0:262144]
+2024-12-18 12:35:25 DEBUG: Calling on_part_data with data[0:262144]
+2024-12-18 12:35:25 DEBUG: Calling on_part_data with data[0:262144]
+2024-12-18 12:35:25 DEBUG: Calling on_part_data with data[0:262144]
+2024-12-18 12:35:25 DEBUG: Calling on_part_data with data[0:131072]
+2024-12-18 12:35:25 DEBUG: Calling on_part_data with data[0:262144]
+2024-12-18 12:35:25 DEBUG: Calling on_part_data with data[0:262144]
+2024-12-18 12:35:25 DEBUG: Calling on_part_data with data[0:65280]
+2024-12-18 12:35:25 DEBUG: Calling on_part_data with data[0:262144]
+2024-12-18 12:35:25 DEBUG: Calling on_part_data with data[0:262144]
+2024-12-18 12:35:25 DEBUG: Calling on_part_data with data[0:262144]
+2024-12-18 12:35:25 DEBUG: Calling on_part_data with data[0:262144]
+2024-12-18 12:35:25 DEBUG: Calling on_part_data with data[0:262144]
+2024-12-18 12:35:25 DEBUG: Calling on_part_data with data[0:262144]
+2024-12-18 12:35:25 DEBUG: Calling on_part_data with data[0:262144]
+2024-12-18 12:35:25 DEBUG: Calling on_part_data with data[0:262144]
+2024-12-18 12:35:25 DEBUG: Calling on_part_data with data[0:262144]
+2024-12-18 12:35:25 DEBUG: Calling on_part_data with data[0:262144]
+2024-12-18 12:35:25 DEBUG: Calling on_part_data with data[0:262144]
+2024-12-18 12:35:25 DEBUG: Calling on_part_data with data[0:12576]
+2024-12-18 12:35:25 DEBUG: Calling on_part_end with no data
+2024-12-18 12:35:25 DEBUG: Calling on_end with no data
+2024-12-18 12:35:25 DEBUG: Image file received in the POST request
+2024-12-18 12:35:25 DEBUG: tag: unknown (39321) - type: string (2) Tag Location: 22 - Data Location: 206 - value: <table: 131 bytes>
+2024-12-18 12:35:25 DEBUG: tag: unknown (34970) - type: byte (1) - value: b'\x00'
+2024-12-18 12:35:25 DEBUG: tag: ImageLength (257) - type: long (4) - value: b'\xf0\x0f\x00\x00'
+2024-12-18 12:35:25 DEBUG: tag: Make (271) - type: string (2) Tag Location: 58 - Data Location: 337 - value: b'Xiaomi\x00'
+2024-12-18 12:35:25 DEBUG: tag: Orientation (274) - type: short (3) - value: b'\x01\x00'
+2024-12-18 12:35:25 DEBUG: tag: DateTime (306) - type: string (2) Tag Location: 82 - Data Location: 344 - value: b'2024:12:18 12:32:16\x00'
+2024-12-18 12:35:25 DEBUG: tag: YResolution (283) - type: rational (5) Tag Location: 94 - Data Location: 364 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+2024-12-18 12:35:25 DEBUG: tag: XResolution (282) - type: rational (5) Tag Location: 106 - Data Location: 372 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+2024-12-18 12:35:25 DEBUG: tag: ImageWidth (256) - type: long (4) - value: b'\x00\x0c\x00\x00'
+2024-12-18 12:35:25 DEBUG: tag: Model (272) - type: string (2) Tag Location: 130 - Data Location: 380 - value: b'22071219AI\x00'
+2024-12-18 12:35:25 DEBUG: tag: Software (305) - type: string (2) Tag Location: 142 - Data Location: 391 - value: b'MediaTek Camera Application\x00\x00\x00\x00\x00'
+2024-12-18 12:35:25 DEBUG: tag: ImageDescription (270) - type: string (2) Tag Location: 154 - Data Location: 423 - value: b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+2024-12-18 12:35:25 DEBUG: tag: YCbCrPositioning (531) - type: short (3) - value: b'\x02\x00'
+2024-12-18 12:35:25 DEBUG: tag: ExifIFD (34665) - type: long (4) - value: b'\xd6\x01\x00\x00'
+2024-12-18 12:35:25 DEBUG: tag: ResolutionUnit (296) - type: short (3) - value: b'\x02\x00'
+2024-12-18 12:35:25 DEBUG: tag: unknown (39424) - type: string (2) Tag Location: 202 - Data Location: 455 - value: b'Redmi 11 Prime\x00'
+2024-12-18 12:35:34 INFO: Image saved at: ./static\image.png
+2024-12-18 12:35:34 DEBUG: STREAM b'IHDR' 16 13
+2024-12-18 12:35:34 DEBUG: STREAM b'IDAT' 41 65536
+2024-12-18 12:35:35 DEBUG: Image loaded and preprocessed from path: ./static\image.png
+2024-12-18 12:35:35 INFO: Prediction made for image: Oil_skin
+2024-12-18 12:35:35 INFO: Prediction response: Type: Oil
+2024-12-18 12:35:37 DEBUG: Calling on_part_begin with no data
+2024-12-18 12:35:37 DEBUG: Calling on_header_field with data[54:73]
+2024-12-18 12:35:37 DEBUG: Calling on_header_value with data[75:133]
+2024-12-18 12:35:37 DEBUG: Calling on_header_end with no data
+2024-12-18 12:35:37 DEBUG: Calling on_header_field with data[135:147]
+2024-12-18 12:35:37 DEBUG: Calling on_header_value with data[149:159]
+2024-12-18 12:35:37 DEBUG: Calling on_header_end with no data
+2024-12-18 12:35:37 DEBUG: Calling on_headers_finished with no data
+2024-12-18 12:35:37 DEBUG: Calling on_part_data with data[0:262144]
+2024-12-18 12:35:37 DEBUG: Calling on_part_data with data[0:262144]
+2024-12-18 12:35:37 DEBUG: Calling on_part_data with data[0:262144]
+2024-12-18 12:35:37 DEBUG: Calling on_part_data with data[0:196608]
+2024-12-18 12:35:37 DEBUG: Calling on_part_data with data[0:131072]
+2024-12-18 12:35:37 DEBUG: Calling on_part_data with data[0:262144]
+2024-12-18 12:35:37 DEBUG: Calling on_part_data with data[0:262144]
+2024-12-18 12:35:37 DEBUG: Calling on_part_data with data[0:262144]
+2024-12-18 12:35:37 DEBUG: Calling on_part_data with data[0:262144]
+2024-12-18 12:35:37 DEBUG: Calling on_part_data with data[0:196352]
+2024-12-18 12:35:37 DEBUG: Calling on_part_data with data[0:262144]
+2024-12-18 12:35:37 DEBUG: Calling on_part_data with data[0:131328]
+2024-12-18 12:35:37 DEBUG: Calling on_part_data with data[0:196608]
+2024-12-18 12:35:37 DEBUG: Calling on_part_data with data[0:196608]
+2024-12-18 12:35:37 DEBUG: Calling on_part_data with data[0:196608]
+2024-12-18 12:35:37 DEBUG: Calling on_part_data with data[0:262144]
+2024-12-18 12:35:37 DEBUG: Calling on_part_data with data[0:262144]
+2024-12-18 12:35:37 DEBUG: Calling on_part_data with data[0:262144]
+2024-12-18 12:35:37 DEBUG: Calling on_part_data with data[0:262144]
+2024-12-18 12:35:37 DEBUG: Calling on_part_data with data[0:262144]
+2024-12-18 12:35:37 DEBUG: Calling on_part_data with data[0:12320]
+2024-12-18 12:35:37 DEBUG: Calling on_part_end with no data
+2024-12-18 12:35:37 DEBUG: Calling on_end with no data
+2024-12-18 12:35:37 DEBUG: Image file received in the POST request
+2024-12-18 12:35:37 DEBUG: tag: unknown (39321) - type: string (2) Tag Location: 22 - Data Location: 206 - value: <table: 131 bytes>
+2024-12-18 12:35:37 DEBUG: tag: unknown (34970) - type: byte (1) - value: b'\x00'
+2024-12-18 12:35:37 DEBUG: tag: ImageLength (257) - type: long (4) - value: b'\xf0\x0f\x00\x00'
+2024-12-18 12:35:37 DEBUG: tag: Make (271) - type: string (2) Tag Location: 58 - Data Location: 337 - value: b'Xiaomi\x00'
+2024-12-18 12:35:37 DEBUG: tag: Orientation (274) - type: short (3) - value: b'\x01\x00'
+2024-12-18 12:35:37 DEBUG: tag: DateTime (306) - type: string (2) Tag Location: 82 - Data Location: 344 - value: b'2024:12:18 12:32:16\x00'
+2024-12-18 12:35:37 DEBUG: tag: YResolution (283) - type: rational (5) Tag Location: 94 - Data Location: 364 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+2024-12-18 12:35:37 DEBUG: tag: XResolution (282) - type: rational (5) Tag Location: 106 - Data Location: 372 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+2024-12-18 12:35:37 DEBUG: tag: ImageWidth (256) - type: long (4) - value: b'\x00\x0c\x00\x00'
+2024-12-18 12:35:37 DEBUG: tag: Model (272) - type: string (2) Tag Location: 130 - Data Location: 380 - value: b'22071219AI\x00'
+2024-12-18 12:35:37 DEBUG: tag: Software (305) - type: string (2) Tag Location: 142 - Data Location: 391 - value: b'MediaTek Camera Application\x00\x00\x00\x00\x00'
+2024-12-18 12:35:37 DEBUG: tag: ImageDescription (270) - type: string (2) Tag Location: 154 - Data Location: 423 - value: b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+2024-12-18 12:35:37 DEBUG: tag: YCbCrPositioning (531) - type: short (3) - value: b'\x02\x00'
+2024-12-18 12:35:37 DEBUG: tag: ExifIFD (34665) - type: long (4) - value: b'\xd6\x01\x00\x00'
+2024-12-18 12:35:37 DEBUG: tag: ResolutionUnit (296) - type: short (3) - value: b'\x02\x00'
+2024-12-18 12:35:37 DEBUG: tag: unknown (39424) - type: string (2) Tag Location: 202 - Data Location: 455 - value: b'Redmi 11 Prime\x00'
+2024-12-18 12:35:49 INFO: Image saved at: ./static\image.png
+2024-12-18 12:35:49 DEBUG: STREAM b'IHDR' 16 13
+2024-12-18 12:35:49 DEBUG: STREAM b'IDAT' 41 65536
+2024-12-18 12:35:50 DEBUG: Image loaded and preprocessed from path: ./static\image.png
+2024-12-18 12:35:50 INFO: Prediction made for image: Oil_skin
+2024-12-18 12:35:50 INFO: Prediction response: Type: Oil
+2024-12-18 12:37:51 DEBUG: Calling on_part_begin with no data
+2024-12-18 12:37:51 DEBUG: Calling on_header_field with data[54:73]
+2024-12-18 12:37:51 DEBUG: Calling on_header_value with data[75:133]
+2024-12-18 12:37:51 DEBUG: Calling on_header_end with no data
+2024-12-18 12:37:51 DEBUG: Calling on_header_field with data[135:147]
+2024-12-18 12:37:51 DEBUG: Calling on_header_value with data[149:159]
+2024-12-18 12:37:51 DEBUG: Calling on_header_end with no data
+2024-12-18 12:37:51 DEBUG: Calling on_headers_finished with no data
+2024-12-18 12:37:51 DEBUG: Calling on_part_data with data[0:262144]
+2024-12-18 12:37:51 DEBUG: Calling on_part_data with data[0:262144]
+2024-12-18 12:37:51 DEBUG: Calling on_part_data with data[0:84217]
+2024-12-18 12:37:51 DEBUG: Calling on_part_end with no data
+2024-12-18 12:37:51 DEBUG: Calling on_end with no data
+2024-12-18 12:37:51 DEBUG: Image file received in the POST request
+2024-12-18 12:37:51 DEBUG: tag: unknown (39321) - type: string (2) Tag Location: 22 - Data Location: 206 - value: <table: 132 bytes>
+2024-12-18 12:37:51 DEBUG: tag: unknown (34970) - type: byte (1) - value: b'\x00'
+2024-12-18 12:37:51 DEBUG: tag: ImageLength (257) - type: long (4) - value: b' \n\x00\x00'
+2024-12-18 12:37:51 DEBUG: tag: Make (271) - type: string (2) Tag Location: 58 - Data Location: 338 - value: b'Xiaomi\x00'
+2024-12-18 12:37:51 DEBUG: tag: Orientation (274) - type: short (3) - value: b'\x01\x00'
+2024-12-18 12:37:51 DEBUG: tag: DateTime (306) - type: string (2) Tag Location: 82 - Data Location: 345 - value: b'2024:12:17 22:09:42\x00'
+2024-12-18 12:37:51 DEBUG: tag: YResolution (283) - type: rational (5) Tag Location: 94 - Data Location: 365 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+2024-12-18 12:37:51 DEBUG: tag: XResolution (282) - type: rational (5) Tag Location: 106 - Data Location: 373 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+2024-12-18 12:37:51 DEBUG: tag: ImageWidth (256) - type: long (4) - value: b'\x90\x04\x00\x00'
+2024-12-18 12:37:51 DEBUG: tag: Model (272) - type: string (2) Tag Location: 130 - Data Location: 381 - value: b'23124RN87I\x00'
+2024-12-18 12:37:51 DEBUG: tag: Software (305) - type: string (2) Tag Location: 142 - Data Location: 392 - value: b'MediaTek Camera Application\x00\x00\x00\x00\x00'
+2024-12-18 12:37:51 DEBUG: tag: ImageDescription (270) - type: string (2) Tag Location: 154 - Data Location: 424 - value: b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+2024-12-18 12:37:51 DEBUG: tag: YCbCrPositioning (531) - type: short (3) - value: b'\x02\x00'
+2024-12-18 12:37:51 DEBUG: tag: ExifIFD (34665) - type: long (4) - value: b'\xd5\x01\x00\x00'
+2024-12-18 12:37:51 DEBUG: tag: ResolutionUnit (296) - type: short (3) - value: b'\x02\x00'
+2024-12-18 12:37:51 DEBUG: tag: unknown (39424) - type: string (2) Tag Location: 202 - Data Location: 456 - value: b'Redmi 13C 5G\x00'
+2024-12-18 12:37:52 INFO: Image saved at: ./static\image.png
+2024-12-18 12:37:52 DEBUG: STREAM b'IHDR' 16 13
+2024-12-18 12:37:52 DEBUG: STREAM b'IDAT' 41 65536
+2024-12-18 12:37:52 DEBUG: Image loaded and preprocessed from path: ./static\image.png
+2024-12-18 12:37:52 INFO: Prediction made for image: Normal_skin
+2024-12-18 12:37:52 INFO: Prediction response: Type: Normal

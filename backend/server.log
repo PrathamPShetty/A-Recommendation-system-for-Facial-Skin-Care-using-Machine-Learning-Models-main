@@ -1,0 +1,119 @@
+2024-12-17 21:54:53 DEBUG: Creating converter from 3 to 5
+2024-12-17 21:54:54 WARNING: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-12-17 21:54:54 INFO: Model loaded successfully
+2024-12-17 21:54:54 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-12-17 21:54:54 INFO: [33mPress CTRL+C to quit[0m
+2024-12-17 21:55:01 ERROR: Error processing the request: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+2024-12-17 21:55:01 INFO: 127.0.0.1 - - [17/Dec/2024 21:55:01] "[35m[1mPUT /upload HTTP/1.1[0m" 500 -
+2024-12-17 21:55:33 ERROR: Error processing the request: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+2024-12-17 21:55:33 INFO: 127.0.0.1 - - [17/Dec/2024 21:55:33] "[35m[1mPUT /upload HTTP/1.1[0m" 500 -
+2024-12-17 21:55:39 ERROR: Error processing the request: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+2024-12-17 21:55:39 INFO: 127.0.0.1 - - [17/Dec/2024 21:55:39] "[35m[1mPUT /upload HTTP/1.1[0m" 500 -
+2024-12-17 21:56:28 DEBUG: Creating converter from 3 to 5
+2024-12-17 21:56:29 WARNING: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-12-17 21:56:29 INFO: Model loaded successfully
+2024-12-17 21:56:29 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-12-17 21:56:29 INFO: [33mPress CTRL+C to quit[0m
+2024-12-17 21:56:38 ERROR: Error processing the request: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+2024-12-17 21:56:38 INFO: 127.0.0.1 - - [17/Dec/2024 21:56:38] "[35m[1mPUT /upload HTTP/1.1[0m" 500 -
+2024-12-17 21:58:40 ERROR: Error processing the request: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+2024-12-17 21:58:40 INFO: 127.0.0.1 - - [17/Dec/2024 21:58:40] "[35m[1mPUT /upload HTTP/1.1[0m" 500 -
+2024-12-17 21:58:42 ERROR: Error processing the request: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+2024-12-17 21:58:42 INFO: 127.0.0.1 - - [17/Dec/2024 21:58:42] "[35m[1mPUT /upload HTTP/1.1[0m" 500 -
+2024-12-17 21:59:11 INFO: 127.0.0.1 - - [17/Dec/2024 21:59:11] "[31m[1mPOST /upload HTTP/1.1[0m" 405 -
+2024-12-17 22:00:33 ERROR: Error processing the request: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+2024-12-17 22:00:33 INFO: 127.0.0.1 - - [17/Dec/2024 22:00:33] "[35m[1mPUT /upload HTTP/1.1[0m" 500 -
+2024-12-17 22:00:36 ERROR: Error processing the request: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+2024-12-17 22:00:36 INFO: 127.0.0.1 - - [17/Dec/2024 22:00:36] "[35m[1mPUT /upload HTTP/1.1[0m" 500 -
+2024-12-17 22:00:38 ERROR: Error processing the request: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+2024-12-17 22:00:38 INFO: 127.0.0.1 - - [17/Dec/2024 22:00:38] "[35m[1mPUT /upload HTTP/1.1[0m" 500 -
+2024-12-17 22:00:40 ERROR: Error processing the request: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+2024-12-17 22:00:40 INFO: 127.0.0.1 - - [17/Dec/2024 22:00:40] "[35m[1mPUT /upload HTTP/1.1[0m" 500 -
+2024-12-17 22:00:41 ERROR: Error processing the request: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+2024-12-17 22:00:41 INFO: 127.0.0.1 - - [17/Dec/2024 22:00:41] "[35m[1mPUT /upload HTTP/1.1[0m" 500 -
+2024-12-17 22:02:17 ERROR: Error processing the request: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+2024-12-17 22:02:17 INFO: 127.0.0.1 - - [17/Dec/2024 22:02:17] "[35m[1mPUT /upload HTTP/1.1[0m" 500 -
+2024-12-17 22:02:20 ERROR: Error processing the request: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+2024-12-17 22:02:20 INFO: 127.0.0.1 - - [17/Dec/2024 22:02:20] "[35m[1mPUT /upload HTTP/1.1[0m" 500 -
+2024-12-17 22:02:21 ERROR: Error processing the request: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+2024-12-17 22:02:21 INFO: 127.0.0.1 - - [17/Dec/2024 22:02:21] "[35m[1mPUT /upload HTTP/1.1[0m" 500 -
+2024-12-17 22:02:46 DEBUG: Image file received in the PUT request
+2024-12-17 22:02:46 DEBUG: STREAM b'IHDR' 16 13
+2024-12-17 22:02:46 DEBUG: STREAM b'sRGB' 41 1
+2024-12-17 22:02:46 DEBUG: STREAM b'gAMA' 54 4
+2024-12-17 22:02:46 DEBUG: STREAM b'pHYs' 70 9
+2024-12-17 22:02:46 DEBUG: STREAM b'IDAT' 91 65445
+2024-12-17 22:02:46 INFO: Image saved at: ./static\image.png
+2024-12-17 22:02:46 DEBUG: STREAM b'IHDR' 16 13
+2024-12-17 22:02:46 DEBUG: STREAM b'IDAT' 41 65536
+2024-12-17 22:02:46 DEBUG: Image loaded and preprocessed from path: ./static\image.png
+2024-12-17 22:02:49 INFO: Prediction made for image: Dry_skin
+2024-12-17 22:02:49 INFO: Prediction response: Type: Dry, Tone: fair to light, Acne: mild
+2024-12-17 22:02:49 INFO: 127.0.0.1 - - [17/Dec/2024 22:02:49] "PUT /upload HTTP/1.1" 200 -
+2024-12-17 22:11:47 DEBUG: Image file received in the PUT request
+2024-12-17 22:11:47 DEBUG: tag: unknown (39321) - type: string (2) Tag Location: 22 - Data Location: 206 - value: <table: 132 bytes>
+2024-12-17 22:11:47 DEBUG: tag: unknown (34970) - type: byte (1) - value: b'\x00'
+2024-12-17 22:11:47 DEBUG: tag: ImageLength (257) - type: long (4) - value: b' \n\x00\x00'
+2024-12-17 22:11:47 DEBUG: tag: Make (271) - type: string (2) Tag Location: 58 - Data Location: 338 - value: b'Xiaomi\x00'
+2024-12-17 22:11:47 DEBUG: tag: Orientation (274) - type: short (3) - value: b'\x01\x00'
+2024-12-17 22:11:47 DEBUG: tag: DateTime (306) - type: string (2) Tag Location: 82 - Data Location: 345 - value: b'2024:12:17 22:09:42\x00'
+2024-12-17 22:11:47 DEBUG: tag: YResolution (283) - type: rational (5) Tag Location: 94 - Data Location: 365 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+2024-12-17 22:11:47 DEBUG: tag: XResolution (282) - type: rational (5) Tag Location: 106 - Data Location: 373 - value: b'H\x00\x00\x00\x01\x00\x00\x00'
+2024-12-17 22:11:47 DEBUG: tag: ImageWidth (256) - type: long (4) - value: b'\x90\x04\x00\x00'
+2024-12-17 22:11:47 DEBUG: tag: Model (272) - type: string (2) Tag Location: 130 - Data Location: 381 - value: b'23124RN87I\x00'
+2024-12-17 22:11:47 DEBUG: tag: Software (305) - type: string (2) Tag Location: 142 - Data Location: 392 - value: b'MediaTek Camera Application\x00\x00\x00\x00\x00'
+2024-12-17 22:11:47 DEBUG: tag: ImageDescription (270) - type: string (2) Tag Location: 154 - Data Location: 424 - value: b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+2024-12-17 22:11:47 DEBUG: tag: YCbCrPositioning (531) - type: short (3) - value: b'\x02\x00'
+2024-12-17 22:11:47 DEBUG: tag: ExifIFD (34665) - type: long (4) - value: b'\xd5\x01\x00\x00'
+2024-12-17 22:11:47 DEBUG: tag: ResolutionUnit (296) - type: short (3) - value: b'\x02\x00'
+2024-12-17 22:11:47 DEBUG: tag: unknown (39424) - type: string (2) Tag Location: 202 - Data Location: 456 - value: b'Redmi 13C 5G\x00'
+2024-12-17 22:11:48 INFO: Image saved at: ./static\image.png
+2024-12-17 22:11:48 DEBUG: STREAM b'IHDR' 16 13
+2024-12-17 22:11:48 DEBUG: STREAM b'IDAT' 41 65536
+2024-12-17 22:11:48 DEBUG: Image loaded and preprocessed from path: ./static\image.png
+2024-12-17 22:11:48 INFO: Prediction made for image: Normal_skin
+2024-12-17 22:11:48 INFO: Prediction response: Type: Normal, Tone: fair to light, Acne: mild
+2024-12-17 22:11:48 INFO: 127.0.0.1 - - [17/Dec/2024 22:11:48] "PUT /upload HTTP/1.1" 200 -
+2024-12-17 22:13:06 DEBUG: Image file received in the PUT request
+2024-12-17 22:13:06 INFO: Image saved at: ./static\image.png
+2024-12-17 22:13:06 DEBUG: STREAM b'IHDR' 16 13
+2024-12-17 22:13:06 DEBUG: STREAM b'IDAT' 41 65536
+2024-12-17 22:13:06 DEBUG: Image loaded and preprocessed from path: ./static\image.png
+2024-12-17 22:13:06 INFO: Prediction made for image: Normal_skin
+2024-12-17 22:13:06 INFO: Prediction response: Type: Normal, Tone: fair to light, Acne: mild
+2024-12-17 22:13:06 INFO: 127.0.0.1 - - [17/Dec/2024 22:13:06] "PUT /upload HTTP/1.1" 200 -
+2024-12-17 22:13:09 DEBUG: Image file received in the PUT request
+2024-12-17 22:13:09 INFO: Image saved at: ./static\image.png
+2024-12-17 22:13:09 DEBUG: STREAM b'IHDR' 16 13
+2024-12-17 22:13:09 DEBUG: STREAM b'IDAT' 41 65536
+2024-12-17 22:13:09 DEBUG: Image loaded and preprocessed from path: ./static\image.png
+2024-12-17 22:13:09 INFO: Prediction made for image: Normal_skin
+2024-12-17 22:13:09 INFO: Prediction response: Type: Normal, Tone: fair to light, Acne: mild
+2024-12-17 22:13:09 INFO: 127.0.0.1 - - [17/Dec/2024 22:13:09] "PUT /upload HTTP/1.1" 200 -
+2024-12-17 22:18:42 DEBUG: Image file received in the PUT request
+2024-12-17 22:18:42 INFO: Image saved at: ./static\image.png
+2024-12-17 22:18:42 DEBUG: STREAM b'IHDR' 16 13
+2024-12-17 22:18:42 DEBUG: STREAM b'iCCP' 41 284
+2024-12-17 22:18:42 DEBUG: iCCP profile name b'ICC Profile'
+2024-12-17 22:18:42 DEBUG: Compression method 0
+2024-12-17 22:18:42 DEBUG: STREAM b'IDAT' 337 65536
+2024-12-17 22:18:42 DEBUG: Image loaded and preprocessed from path: ./static\image.png
+2024-12-17 22:18:43 INFO: Prediction made for image: Oil_skin
+2024-12-17 22:18:43 INFO: Prediction response: Type: Oil, Tone: fair to light, Acne: mild
+2024-12-17 22:18:43 INFO: 127.0.0.1 - - [17/Dec/2024 22:18:43] "PUT /upload HTTP/1.1" 200 -
+2024-12-17 22:20:26 DEBUG: Image file received in the PUT request
+2024-12-17 22:20:27 INFO: Image saved at: ./static\image.png
+2024-12-17 22:20:27 DEBUG: STREAM b'IHDR' 16 13
+2024-12-17 22:20:27 DEBUG: STREAM b'iCCP' 41 284
+2024-12-17 22:20:27 DEBUG: iCCP profile name b'ICC Profile'
+2024-12-17 22:20:27 DEBUG: Compression method 0
+2024-12-17 22:20:27 DEBUG: STREAM b'IDAT' 337 65536
+2024-12-17 22:20:27 DEBUG: Image loaded and preprocessed from path: ./static\image.png
+2024-12-17 22:20:27 INFO: Prediction made for image: Oil_skin
+2024-12-17 22:20:27 INFO: Prediction response: Type: Oil, Tone: fair to light, Acne: mild
+2024-12-17 22:20:27 INFO: 127.0.0.1 - - [17/Dec/2024 22:20:27] "PUT /upload HTTP/1.1" 200 -
+2024-12-18 11:30:50 DEBUG: Creating converter from 3 to 5
+2024-12-18 11:30:51 WARNING: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-12-18 11:30:51 INFO: Model loaded successfully
