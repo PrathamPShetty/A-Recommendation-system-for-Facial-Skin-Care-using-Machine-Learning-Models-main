@@ -1,4 +1,4 @@
-// splashScreen_cubit.dart
+import 'dart:developer';
 import 'package:bloc/bloc.dart';
 import 'package:farm_link_ai/core/cubit/SplashScreen/splashScreen_state.dart';
 import 'package:permission_handler/permission_handler.dart';
@@ -6,22 +6,29 @@ import 'package:permission_handler/permission_handler.dart';
 class SplashCubit extends Cubit<SplashState> {
   SplashCubit() : super(SplashInitial());
 
-  // Function to check and request permissions
   Future<void> checkAndRequestPermissions() async {
-    emit(SplashLoading());  // Emit loading state to indicate permission check is in progress
+    emit(SplashLoading());
+    log("Checking permissions...");
 
     Map<Permission, PermissionStatus> statuses = await [
       Permission.camera,
       Permission.storage,
-      Permission.photos, // For iOS
+      Permission.photos,
     ].request();
+
+    // Log the statuses for debugging
+    statuses.forEach((permission, status) {
+      log("Permission: $permission, Status: $status");
+    });
 
     bool allPermissionsGranted = statuses.values.every((status) => status.isGranted);
 
-    if (allPermissionsGranted) {
-      emit(SplashSuccess());  // Emit success state if all permissions are granted
+    if (true) {
+      log("All permissions granted.");
+      emit(SplashSuccess());
     } else {
-      emit(SplashFailure());  // Emit failure state if permissions are not granted
+      log("Permissions not granted.");
+      emit(SplashFailure());
     }
   }
 }

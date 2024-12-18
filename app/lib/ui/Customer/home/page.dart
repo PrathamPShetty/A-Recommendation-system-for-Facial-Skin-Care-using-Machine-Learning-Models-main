@@ -35,7 +35,7 @@ class _HomeState extends State<Home> {
             Container(
               decoration: const BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage(consts.heroBg1),
+                  image: AssetImage(consts.navbarImage),
                   fit: BoxFit.cover,
                 ),
               ),
@@ -128,9 +128,9 @@ class _HomeState extends State<Home> {
                   child: ListView(
                     scrollDirection: Axis.horizontal,
                     children: [
-                      _makeVideo(consts.banner2),
-                      _makeVideo(consts.banner),
-                      _makeVideo(consts.banner1),
+                      _makeVideo(consts.navbarImage),
+                      _makeVideo(consts.navbarImage),
+                      _makeVideo(consts.navbarImage),
                     ],
                   ),
                 ),
@@ -158,9 +158,9 @@ class _HomeState extends State<Home> {
                   child: ListView(
                     scrollDirection: Axis.horizontal,
                     children: [
-                      _makeVideo(consts.heroBg3),
-                      _makeVideo(consts.heroBg2),
-                      _makeVideo(consts.service2),
+                      _makeVideo(consts.navbarImage),
+                      _makeVideo(consts.navbarImage),
+                      _makeVideo(consts.navbarImage),
                     ],
                   ),
                 ),
@@ -172,28 +172,7 @@ class _HomeState extends State<Home> {
       ),
     );
   }
-  //
-  // Widget _buildDetailsSection(String title, String detail) {
-  //   return Column(
-  //     crossAxisAlignment: CrossAxisAlignment.start,
-  //     children: [
-  //       Text(
-  //         title,
-  //         style: const TextStyle(
-  //           color: Colors.white,
-  //           fontSize: 18,
-  //           fontWeight: FontWeight.bold,
-  //         ),
-  //       ),
-  //       const SizedBox(height: 10),
-  //       Text(
-  //         detail,
-  //         style: const TextStyle(color: Colors.grey),
-  //       ),
-  //       const SizedBox(height: 20),
-  //     ],
-  //   );
-  // }
+
 
   Widget _makeVideo(String image) {
     return AspectRatio(

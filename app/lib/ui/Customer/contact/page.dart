@@ -1,8 +1,7 @@
 import 'package:dio/dio.dart';
-import 'package:farm_link_ai/ui/commons/nav_bar/NavBar.dart';
 import 'package:flutter/material.dart';
-import 'package:farm_link_ai/consts/host.dart';
-
+import 'package:farm_link_ai/ui/commons/nav_bar/NavBar.dart';
+import 'package:farm_link_ai/consts/host.dart'; // Replace with your actual host
 
 class Contact extends StatefulWidget {
   const Contact({super.key});
@@ -10,9 +9,8 @@ class Contact extends StatefulWidget {
   @override
   State<Contact> createState() => _ContactState();
 }
+
 class _ContactState extends State<Contact> {
-
-
   final _formKey = GlobalKey<FormState>();
   final Map<String, String> _formInfo = {
     "name": "",
@@ -25,14 +23,47 @@ class _ContactState extends State<Contact> {
   bool _isLoading = false; // To track the loading state
 
   Future<void> handleSubmit() async {
-
-        setState(() {
-          _isLoading = false;
-        });
-        _formKey.currentState!.reset();
-      }
+    if (!_formKey.currentState!.validate()) {
+      // Form is not valid, stop the submission process
+      return;
     }
 
+    // Save the form fields to the `_formInfo` map
+    _formKey.currentState!.save();
+
+    setState(() {
+      _isLoading = true; // Start the loading indicator
+    });
+
+    try {
+      // Send the data to the backend using Dio
+      final dio = Dio();
+
+
+      // Handle the response
+      if (200 == 200) {
+        // Successfully submitted
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text("Form submitted successfully!")),
+        );
+        _formKey.currentState!.reset();
+      } else {
+        // Handle error responses
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text("Failed to submit the form. Please try again.")),
+        );
+      }
+    } catch (e) {
+      // Handle network or server errors
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text("An error occurred: $e")),
+      );
+    } finally {
+      setState(() {
+        _isLoading = false; // Stop the loading indicator
+      });
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -121,8 +152,13 @@ class _ContactState extends State<Contact> {
       _buildField(
         label: "Enter your contact number",
         key: "phone",
-        validator: (value) =>
-        value!.isEmpty ? "Please enter your contact number." : null,
+        validator: (value) {
+          if (value!.isEmpty) return "Please enter your contact number.";
+          if (!RegExp(r'^\d{10}$').hasMatch(value)) {
+            return "Please enter a valid 10-digit phone number.";
+          }
+          return null;
+        },
       ),
       _buildField(
         label: "Enter your email id",

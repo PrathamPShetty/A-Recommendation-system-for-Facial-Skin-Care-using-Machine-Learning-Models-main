@@ -3,37 +3,46 @@ import 'package:farm_link_ai/ui/Customer/contact/page.dart';
 import 'package:farm_link_ai/ui/Customer/home/page.dart';
 import 'package:farm_link_ai/ui/Customer/product/page.dart';
 import 'package:farm_link_ai/ui/SplashScreen/page.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:farm_link_ai/ui/Customer/recommedation/page.dart';
+
 
 final GoRouter router = GoRouter(
-  initialLocation: '/',
+  initialLocation: '/welcome',
   debugLogDiagnostics: true,
   routes: [
     GoRoute(
-      path: '/',
+      path: '/recommendation',
       builder: (BuildContext context, GoRouterState state) =>
-          const SplashScreen(),
-
+      const SplashScreen(),
+      routes: [
         GoRoute(
-          path: 'home',
+          path: '/',
           builder: (BuildContext context, GoRouterState state) =>
-              const Home(), // Default view for 'customer'
-          routes: [
-            GoRoute(
-              path: 'about',
-              builder: (BuildContext context, GoRouterState state) =>
-                  const About(),
-            ),
-            GoRoute(
-              path: 'about',
-              builder: (BuildContext context, GoRouterState state) =>
-                  const About(),
-            ),
-
-        ]
+          const Home(),
         ),
+        GoRoute(
+          path: 'about',
+          builder: (BuildContext context, GoRouterState state) =>
+          const About(),
         ),
-  ]
-
+        GoRoute(
+          path: 'contact',
+          builder: (BuildContext context, GoRouterState state) =>
+          const Contact(),
+        ),
+        GoRoute(
+          path: 'recommendation',
+          builder: (BuildContext context, GoRouterState state) =>
+          const CameraPage(),
+        ),
+        GoRoute(
+          path: 'product',
+          builder: (BuildContext context, GoRouterState state) =>
+          const CustomerProduct(),
+        ),
+      ],
+    ),
+  ],
 );

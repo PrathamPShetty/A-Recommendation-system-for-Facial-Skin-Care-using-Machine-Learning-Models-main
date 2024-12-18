@@ -41,7 +41,7 @@ class _NavBarState extends State<NavBar> {
         backgroundColor: Colors.white,
         leading: Builder(
           builder: (context) => IconButton(
-            icon: const Icon(Icons.menu, color: Color(0xFF404A3D)),
+            icon: const Icon(Icons.menu, color: Color(0xFF6ADFEF)),
             onPressed: () {
               Scaffold.of(context).openDrawer();
             },
@@ -87,7 +87,7 @@ class _NavBarState extends State<NavBar> {
 
   List<Widget> _MenuItems(BuildContext context) {
     return [
-      _drawerItem(context, Icons.home, 'Home', '/home'),
+      _drawerItem(context, Icons.home, 'Home', '/'),
       _drawerItem(context, Icons.info, 'About Us', '/about'),
       _drawerItem(context, Icons.contact_phone, 'Contact', '/contact'),
       _drawerItem(context, Icons.recommend, 'AI Recommendation', '/recommendation'),

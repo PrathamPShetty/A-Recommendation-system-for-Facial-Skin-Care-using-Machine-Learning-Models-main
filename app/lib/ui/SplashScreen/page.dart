@@ -1,12 +1,10 @@
-import 'package:farm_link_ai/consts/strings.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:lottie/lottie.dart';
 import 'package:go_router/go_router.dart';
-import 'package:permission_handler/permission_handler.dart';
 import 'package:farm_link_ai/core/cubit/SplashScreen/splashScreen_cubit.dart';
 import 'package:farm_link_ai/core/cubit/SplashScreen/splashScreen_state.dart';
-import 'package:farm_link_ai/consts/assets.dart';
+import 'package:farm_link_ai/consts/assets.dart' as consts;
+import 'package:farm_link_ai/consts/constants.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
@@ -16,136 +14,116 @@ class SplashScreen extends StatelessWidget {
     return BlocProvider(
       create: (_) => SplashCubit()..checkAndRequestPermissions(),
       child: Scaffold(
-        backgroundColor: Colors.blueAccent,
         body: BlocBuilder<SplashCubit, SplashState>(
           builder: (context, state) {
             if (state is SplashLoading) {
-              return _buildSplashScreenLoading();
+              return const Center(
+                child: CircularProgressIndicator(),
+              );
             }
 
-            if (state is SplashFailure) {
-              return _buildSplashScreenContent(context);
-            }
 
-            if (state is SplashSuccess) {
-              return _buildSplashScreenContent(context);
-            }
-
-            // Default loading state
-            return _buildSplashScreenLoading();
+            return _SplashContent(state: state);
           },
         ),
       ),
     );
   }
+}
 
-  // Loading animation while checking permissions
-  Widget _buildSplashScreenLoading() {
-    return Center(
-      child: Lottie.asset(
-        loadingAnimation, // Add your Lottie JSON file here
-        width: 200,
-        height: 200,
-        fit: BoxFit.cover,
-      ),
-    );
-  }
+class _SplashContent extends StatelessWidget {
+  final SplashState state;
 
-  // Content when permissions are successfully granted
-  Widget _buildSplashScreenContent(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        // Lottie Animation
-        Expanded(
-          flex: 3,
-          child: Center(
-            child: Lottie.asset(
-              loadingAnimation, // Add your Lottie JSON file here
-              width: 200,
-              height: 200,
-              fit: BoxFit.cover,
-            ),
-          ),
+  const _SplashContent({required this.state});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: double.infinity,
+      decoration: const BoxDecoration(
+        image: DecorationImage(
+          image: AssetImage(consts.navbarImage),
+          fit: BoxFit.cover,
         ),
-
-        // Title and Subtitle
-        const Expanded(
-          flex: 2,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                welcomeText,
-                style: TextStyle(
-                  fontSize: 28,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
-                ),
-              ),
-              SizedBox(height: 10),
-              Text(
-                welcomeText1,
-                style: TextStyle(
-                  fontSize: 18,
-                  color: Colors.white70,
-                ),
-              ),
+      ),
+      child: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.bottomRight,
+            colors: [
+              Colors.black.withOpacity(.9),
+              Colors.black.withOpacity(.4),
             ],
           ),
         ),
-
-        // Get Started Button
-        Expanded(
-          flex: 1,
-          child: Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.white,
-                foregroundColor: Colors.blueAccent,
-                minimumSize: const Size(double.infinity, 50),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(12),
-                ),
-              ),
-              onPressed: () {
-                context.go('/login');  // Navigate to login page
-              },
-              child: const Text(
-                getStart,
+        child: Padding(
+          padding: const EdgeInsets.all(30.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: <Widget>[
+              const Text(
+                "Brand New Perspective",
                 style: TextStyle(
-                  fontSize: 20,
+                  color: Colors.white,
+                  fontSize: 40,
                   fontWeight: FontWeight.bold,
                 ),
               ),
+              const SizedBox(height: 20),
+              const Text(
+                "Let's start with our summer collection.",
+                style: TextStyle(color: Colors.white, fontSize: 20),
+              ),
+              const SizedBox(height: 100),
+              AnimatedButton(
+                text: getStarted,
+                onTap: () {
+                  GoRouter.of(context).go('/home');
+                },
+                isPrimary: true,
+              ),
+              const SizedBox(height: 20),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class AnimatedButton extends StatelessWidget {
+  final String text;
+  final VoidCallback onTap;
+  final bool isPrimary;
+
+  const AnimatedButton({
+    Key? key,
+    required this.text,
+    required this.onTap,
+    this.isPrimary = true,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      onTap: onTap,
+      child: Container(
+        height: 50,
+        decoration: BoxDecoration(
+          color: isPrimary ? Colors.white : Colors.transparent,
+          border: isPrimary ? null : Border.all(color: Colors.white),
+          borderRadius: BorderRadius.circular(50),
+        ),
+        child: Center(
+          child: Text(
+            text,
+            style: TextStyle(
+              color: isPrimary ? Colors.black : Colors.white,
+              fontWeight: FontWeight.bold,
             ),
           ),
         ),
-      ],
-    );
-  }
-
-  // When permissions are denied
-  Widget _buildSplashScreenDenied() {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          const Text(
-            'Permissions Denied',
-            style: TextStyle(
-              fontSize: 20,
-              color: Colors.white,
-            ),
-          ),
-          ElevatedButton(
-            onPressed: () async {
-              await openAppSettings();  // Open app settings to allow permissions
-            },
-            child: const Text('Go to Settings'),
-          ),
-        ],
       ),
     );
   }
