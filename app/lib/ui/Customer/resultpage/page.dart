@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:farm_link_ai/consts/assets.dart' as img;
-
+import 'package:url_launcher/url_launcher.dart';
 final Map<String, Map<String, dynamic>> remediesData = {
   "Dry": {
     "home_products": [
@@ -41,22 +41,29 @@ final Map<String, Map<String, dynamic>> remediesData = {
       {
         "name": "Honey and Olive Oil Mask",
         "image": img.img16,
-        "description": "A moisturizing mask that hydrates dry skin using honey and olive oil, leaving it soft and nourished."
+        "description": "A moisturizing mask that hydrates dry skin using honey and olive oil, leaving it soft and nourished.",
+"link":"https://www.dotandkey.com/products/dot-key-ceramides-hyaluronic-hydrating-face-cream-i-repairs-skin-barrier-intense-moisturization-sensitive-dry-skin-fragrance-free?srsltid=AfmBOopqfySxfrZuf7w4NFhOOo_X7lKl6Frhcufo3WOQBhGb0eSMe9_MZ_w"
       },
       {
         "name": "Aloe Vera Gel",
         "image": img.img17,
-        "description": "Fresh aloe vera gel that soothes and hydrates dry skin, providing a refreshing and calming effect."
+        "description": "Fresh aloe vera gel that soothes and hydrates dry skin, providing a refreshing and calming effect.",
+        "link":"https://www.dotandkey.com/products/dot-key-ceramides-hyaluronic-hydrating-face-cream-i-repairs-skin-barrier-intense-moisturization-sensitive-dry-skin-fragrance-free?srsltid=AfmBOopqfySxfrZuf7w4NFhOOo_X7lKl6Frhcufo3WOQBhGb0eSMe9_MZ_w"
+
       },
       {
         "name": "CeraVe Hydrating Facial Cleanser",
         "image": img.img12,
-        "description": "A hydrating cleanser suitable for dry skin. Helps to restore the skin's moisture barrier."
+        "description": "A hydrating cleanser suitable for dry skin. Helps to restore the skin's moisture barrier.",
+        "link":"https://www.dotandkey.com/products/dot-key-ceramides-hyaluronic-hydrating-face-cream-i-repairs-skin-barrier-intense-moisturization-sensitive-dry-skin-fragrance-free?srsltid=AfmBOopqfySxfrZuf7w4NFhOOo_X7lKl6Frhcufo3WOQBhGb0eSMe9_MZ_w"
+
       },
       {
         "name": "Eucerin Advanced Repair Lotion",
         "image": img.img14,
-        "description": "A rich moisturizer designed to relieve dry, rough skin."
+        "description": "A rich moisturizer designed to relieve dry, rough skin.",
+        "link":"https://www.dotandkey.com/products/dot-key-ceramides-hyaluronic-hydrating-face-cream-i-repairs-skin-barrier-intense-moisturization-sensitive-dry-skin-fragrance-free?srsltid=AfmBOopqfySxfrZuf7w4NFhOOo_X7lKl6Frhcufo3WOQBhGb0eSMe9_MZ_w"
+
       },
 
     ]
@@ -98,22 +105,26 @@ final Map<String, Map<String, dynamic>> remediesData = {
       {
         "name": "Cucumber and Yogurt Mask",
         "image":  img.img18,
-        "description": "A hydrating and refreshing mask made with cucumber and yogurt, perfect for normal skin."
+        "description": "A hydrating and refreshing mask made with cucumber and yogurt, perfect for normal skin.",
+        "link":"https://www.myntra.com/massage-oils/joy/joy-honey--almonds-nourishing-body-oil-with-vitamin-e--sunscreen---200-ml/18426344/buy"
       },
       {
         "name": "Rose Water Toner",
         "image":  img.img19,
-        "description": "A gentle toner that balances the skin's pH and refreshes the skin with rose water."
+        "description": "A gentle toner that balances the skin's pH and refreshes the skin with rose water.",
+        "link": "https://www.myntra.com/massage-oils/joy/joy-honey--almonds-nourishing-body-oil-with-vitamin-e--sunscreen---200-ml/18426344/buy"
       },
       {
         "name": "Honey and Olive Oil Mask",
         "image":  img.img20,
-        "description": "A moisturizing mask that hydrates dry skin using honey and olive oil, leaving it soft and nourished."
+        "description": "A moisturizing mask that hydrates dry skin using honey and olive oil, leaving it soft and nourished.",
+        "link":"https://www.myntra.com/massage-oils/joy/joy-honey--almonds-nourishing-body-oil-with-vitamin-e--sunscreen---200-ml/18426344/buy"
       },
       {
         "name": "Aloe Vera Gel",
         "image":  img.img21,
-        "description": "Fresh aloe vera gel that soothes and hydrates dry skin, providing a refreshing and calming effect."
+        "description": "Fresh aloe vera gel that soothes and hydrates dry skin, providing a refreshing and calming effect.",
+        "link":"https://www.myntra.com/massage-oils/joy/joy-honey--almonds-nourishing-body-oil-with-vitamin-e--sunscreen---200-ml/18426344/buy"
       }
     ]
   },
@@ -156,22 +167,29 @@ final Map<String, Map<String, dynamic>> remediesData = {
       {
         "name": "Lemon and Honey Face Pack",
         "image":  img.img22,
-        "description": "A mask that helps control excess oil with the natural astringent properties of lemon and honey."
+        "description": "A mask that helps control excess oil with the natural astringent properties of lemon and honey.",
+        "link":"https://beminimalist.co/products/marula-05-moisturizer?currency=INR&variant=41476371480737&utm_source=google&utm_medium=cpc&utm_campaign=Google%20Shopping&stkn=f4faea6d89b6&srsltid=AfmBOoox4t-je7iJzXNoWU2DbcFRb8Q6B5LpxJkB0zRkdvwNJBt6rST_5yk"
       },
       {
         "name": "Aloe Vera and Tea Tree Oil Mask",
         "image":  img.img23,
-        "description": "A mask with aloe vera and tea tree oil that fights acne and controls oil production while hydrating the skin."
+        "description": "A mask with aloe vera and tea tree oil that fights acne and controls oil production while hydrating the skin.",
+        "link":"https://beminimalist.co/products/marula-05-moisturizer?currency=INR&variant=41476371480737&utm_source=google&utm_medium=cpc&utm_campaign=Google%20Shopping&stkn=f4faea6d89b6&srsltid=AfmBOoox4t-je7iJzXNoWU2DbcFRb8Q6B5LpxJkB0zRkdvwNJBt6rST_5yk"
+
       },
       {
         "name": "Neutrogena Hydro Boost Water Gel",
         "image": img.img13,
-        "description": "A gel-based moisturizer that provides intense hydration without feeling greasy."
+        "description": "A gel-based moisturizer that provides intense hydration without feeling greasy.",
+        "link":"https://beminimalist.co/products/marula-05-moisturizer?currency=INR&variant=41476371480737&utm_source=google&utm_medium=cpc&utm_campaign=Google%20Shopping&stkn=f4faea6d89b6&srsltid=AfmBOoox4t-je7iJzXNoWU2DbcFRb8Q6B5LpxJkB0zRkdvwNJBt6rST_5yk"
+
       },
       {
         "name": "Clinique Moisture Surge 72-Hour Auto-Replenishing Hydrator",
         "image": img.img15,
-        "description": "An oil-free moisturizer that helps skin retain moisture for up to 72 hours."
+        "description": "An oil-free moisturizer that helps skin retain moisture for up to 72 hours.",
+        "link":"https://beminimalist.co/products/marula-05-moisturizer?currency=INR&variant=41476371480737&utm_source=google&utm_medium=cpc&utm_campaign=Google%20Shopping&stkn=f4faea6d89b6&srsltid=AfmBOoox4t-je7iJzXNoWU2DbcFRb8Q6B5LpxJkB0zRkdvwNJBt6rST_5yk"
+
       }
     ]
   }
@@ -299,8 +317,8 @@ class ResultPage extends StatelessWidget {
                     return Card(
                       margin: const EdgeInsets.only(bottom: 16.0),
                       elevation: 5,
-                      child: Padding(
-                        padding: const EdgeInsets.all(16.0),
+                      child: GestureDetector(
+                        onTap: () => _launchURL(product["link"] ?? ''),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
@@ -329,5 +347,13 @@ class ResultPage extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+Future<void> _launchURL(String url) async {
+  final Uri uri = Uri.parse(url);
+  if (await canLaunchUrl(uri)) {
+    await launchUrl(uri, mode: LaunchMode.externalApplication);
+  } else {
+    throw 'Could not launch $url';
   }
 }

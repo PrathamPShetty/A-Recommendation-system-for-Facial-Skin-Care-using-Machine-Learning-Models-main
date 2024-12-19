@@ -93,6 +93,7 @@ class _NavBarState extends State<NavBar> {
       _drawerItem(context, Icons.recommend, 'AI Recommendation', '/recommendation'),
       _drawerItem(context, Icons.shopping_cart, 'Product', '/product'),
       _drawerItem(context, Icons.help, 'Help', '/help'),
+      _drawerItem(context, Icons.settings, 'Setting', '/setting'),
     ];
   }
 

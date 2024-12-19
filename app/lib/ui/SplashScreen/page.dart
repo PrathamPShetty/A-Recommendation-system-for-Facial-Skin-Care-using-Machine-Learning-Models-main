@@ -79,7 +79,7 @@ class _SplashContent extends StatelessWidget {
               AnimatedButton(
                 text: getStarted,
                 onTap: () {
-                  GoRouter.of(context).go('/home');
+                  GoRouter.of(context).go('/');
                 },
                 isPrimary: true,
               ),

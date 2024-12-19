@@ -1,2 +1,2 @@
-# farm_link_ai
+# Skin Care Recommendation System
 

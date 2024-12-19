@@ -8,9 +8,10 @@ import 'package:go_router/go_router.dart';
 import 'package:farm_link_ai/ui/Customer/recommedation/page.dart';
 import 'package:farm_link_ai/ui/Customer/resultpage/page.dart';
 import 'package:farm_link_ai/ui/Customer/help/page.dart';
+import 'package:farm_link_ai/ui/Customer/setting.dart';
 
 final GoRouter router = GoRouter(
-  initialLocation: '/recommendation',
+  initialLocation: '/welcome',
   debugLogDiagnostics: true,
   routes: [
     GoRoute(
@@ -18,7 +19,7 @@ final GoRouter router = GoRouter(
       builder: (BuildContext context, GoRouterState state) => const Home(),
       routes: [
         GoRoute(
-          path: '/welcome',
+          path: 'welcome',
           builder: (BuildContext context, GoRouterState state) =>
               const SplashScreen(),
         ),
@@ -53,6 +54,10 @@ final GoRouter router = GoRouter(
           path: 'help',
           builder: (BuildContext context, GoRouterState state) =>
               const Help(),
+        ), GoRoute(
+          path: 'setting',
+          builder: (BuildContext context, GoRouterState state) =>
+              Setting(),
         ),
       ],
     ),

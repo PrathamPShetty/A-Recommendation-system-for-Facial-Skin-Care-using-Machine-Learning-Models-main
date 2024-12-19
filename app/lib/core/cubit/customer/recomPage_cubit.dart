@@ -1,10 +1,9 @@
-
 import 'dart:io';
 import 'package:bloc/bloc.dart';
 import 'package:dio/dio.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:farm_link_ai/consts/host.dart';
-
+// import 'package:farm_link_ai/consts/host.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 part 'state_cubit.dart';
 
 class SkinCareCubit extends Cubit<SkinCareState> {
@@ -13,21 +12,46 @@ class SkinCareCubit extends Cubit<SkinCareState> {
   final ImagePicker _picker = ImagePicker();
   File? _selectedFile;
 
+  /// Choose an image file from the gallery
   Future<void> chooseFile() async {
     try {
       final XFile? image = await _picker.pickImage(source: ImageSource.gallery);
       if (image != null) {
         _selectedFile = File(image.path);
         emit(SkinCareFileSelected(file: _selectedFile!));
+      } else {
+        emit(SkinCareError(message: 'No file selected.'));
       }
     } catch (e) {
       emit(SkinCareError(message: 'Failed to pick an image.'));
     }
   }
 
+  /// Capture an image using the camera
+  Future<void> captureFromCamera() async {
+    try {
+      final XFile? image = await _picker.pickImage(source: ImageSource.camera);
+      if (image != null) {
+        _selectedFile = File(image.path);
+        emit(SkinCareFileSelected(file: _selectedFile!));
+      } else {
+        emit(SkinCareError(message: 'No photo captured.'));
+      }
+    } catch (e) {
+      emit(SkinCareError(message: 'Failed to capture an image.'));
+    }
+  }
+
+  /// Upload the image and get skin care recommendations
   Future<void> recommendSkinCare() async {
+    final prefs = await SharedPreferences.getInstance();
+    final host = prefs.getString('host') ?? '';
+    if (host.isEmpty) {
+      emit(SkinCareError(message: 'Host not set. Please configure the host.'));
+      return;
+    }
     if (_selectedFile == null) {
-      emit(SkinCareError(message: 'No file selected.'));
+      emit(SkinCareError(message: 'No file selected or captured.'));
       return;
     }
 
@@ -52,7 +76,7 @@ class SkinCareCubit extends Cubit<SkinCareState> {
             acneType: data['acne_type'],
           ));
         } else {
-          emit(SkinCareError(message: 'Failed to analyze skin.'));
+          emit(SkinCareError(message: 'Failed to analyze skin. Invalid response.'));
         }
       } else {
         emit(SkinCareError(message: 'Failed to load recommendations.'));
@@ -60,5 +84,11 @@ class SkinCareCubit extends Cubit<SkinCareState> {
     } catch (e) {
       emit(SkinCareError(message: 'An error occurred while analyzing the skin.'));
     }
+  }
+
+  /// Reset the state to initial
+  void resetState() {
+    _selectedFile = null;
+    emit(SkinCareInitial());
   }
 }

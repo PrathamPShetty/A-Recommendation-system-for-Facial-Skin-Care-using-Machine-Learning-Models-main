@@ -21,7 +21,7 @@ class Help extends StatelessWidget {
                   height: isSmallScreen ? 200 : 300,
                   decoration: const BoxDecoration(
                     image: DecorationImage(
-                      image: AssetImage(consts.img25),
+                      image: AssetImage(consts.img26),
                       fit: BoxFit.cover,
                     ),
                   ),

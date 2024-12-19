@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:image_picker/image_picker.dart'; // Add this package
 import '../../../core/cubit/customer/recomPage_cubit.dart';
 import 'package:farm_link_ai/ui/Customer/resultpage/page.dart';
 
@@ -41,9 +42,19 @@ class CameraPage extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
+                  const Text(
+                    'Take a photo after washing with a clean face',
+                    style: TextStyle(fontSize: 16.0),
+                  ),
+                  const SizedBox(height: 20),
                   ElevatedButton(
-                    onPressed: cubit.chooseFile,
+                    onPressed: cubit.chooseFile, // Choose file from gallery
                     child: const Text('Choose File'),
+                  ),
+                  const SizedBox(height: 20),
+                  ElevatedButton(
+                    onPressed: cubit.captureFromCamera, // Capture using the camera
+                    child: const Text('Capture Photo'),
                   ),
                   const SizedBox(height: 20),
                   if (state is SkinCareFileSelected)
