@@ -349,11 +349,15 @@ class ResultPage extends StatelessWidget {
     );
   }
 }
-Future<void> _launchURL(String url) async {
-  final Uri uri = Uri.parse(url);
-  if (await canLaunchUrl(uri)) {
-    await launchUrl(uri, mode: LaunchMode.externalApplication);
-  } else {
-    throw 'Could not launch $url';
+void _launchURL(String url) async {
+  try {
+    final encodedUrl = Uri.encodeFull(url); // Encode the URL
+    if (await canLaunch(encodedUrl)) {
+      await launchUrl(encodedUrl as Uri);
+    } else {
+      debugPrint('Could not launch $encodedUrl');
+    }
+  } catch (e) {
+    debugPrint('Error launching URL: $e');
   }
 }

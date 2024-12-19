@@ -43,7 +43,7 @@ class CameraPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   const Text(
-                    'Take a photo after washing with a clean face',
+                    'Take a photo after washing face',
                     style: TextStyle(fontSize: 16.0),
                   ),
                   const SizedBox(height: 20),
