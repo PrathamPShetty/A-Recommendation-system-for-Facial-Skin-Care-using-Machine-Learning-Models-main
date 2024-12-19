@@ -15,28 +15,46 @@ class _CustomerProductState extends State<CustomerProduct> {
   // Static products data
   final List<Product> staticProducts = [
     Product(
-        title: "Fresh Tomatoes",
-        price: 30.0,
-        picture: consts.navbarImage ), // Use a static image file name
+      title: "Honey and Olive Oil Mask",
+      price: 15.0,
+      picture:
+         consts.img1, // Use a static image file name
+    ),
     Product(
-        title: "Organic Spinach",
-        price: 50.0,
-        picture: consts.navbarImage), // Use a static image file name
+      title: "Aloe Vera Gel",
+      price: 20.0,
+      picture: consts.img7, // Use a static image file name
+    ),
     Product(
-        title: "Carrots",
-        price: 40.0,
-        picture: consts.navbarImage), // Use a static image file name
+      title: "Cucumber and Yogurt Mask",
+      price: 18.0,
+      picture:
+         consts.img9, // Use a static image file name
+    ),
     Product(
-        title: "Potatoes",
-        price: 25.0,
-        picture: consts.navbarImage), // Use a static image file name
+      title: "Rose Water Toner",
+      price: 12.0,
+      picture: consts.img4, // Use a static image file name
+    ),
+    Product(
+      title: "Lemon and Honey Face Pack",
+      price: 10.0,
+      picture:
+          consts.img22, // Use a static image file name
+    ),
+    Product(
+      title: "Aloe Vera and Tea Tree Oil Mask",
+      price: 22.0,
+      picture:
+          consts.img24, // Use a static image file name
+    ),
   ];
 
   @override
   Widget build(BuildContext context) {
     final filteredProducts = staticProducts
         .where((product) =>
-        product.title.toLowerCase().contains(searchQuery.toLowerCase()))
+            product.title.toLowerCase().contains(searchQuery.toLowerCase()))
         .toList();
 
     return Scaffold(
@@ -103,7 +121,7 @@ class _CustomerProductState extends State<CustomerProduct> {
                     borderSide: const BorderSide(width: 1),
                   ),
                   contentPadding:
-                  const EdgeInsets.symmetric(vertical: 15, horizontal: 20),
+                      const EdgeInsets.symmetric(vertical: 15, horizontal: 20),
                 ),
                 onChanged: (value) {
                   setState(() {
@@ -164,7 +182,7 @@ class ProductItem extends StatelessWidget {
             child: ClipRRect(
               borderRadius: BorderRadius.circular(15),
               child: Image.asset(
-                "assets/images/${product.picture}", // Use the static image path
+                product.picture, // Use the static image path
                 fit: BoxFit.cover,
                 height: 180,
                 width: double.infinity,

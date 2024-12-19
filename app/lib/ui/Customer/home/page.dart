@@ -27,7 +27,7 @@ class _HomeState extends State<Home> {
     return SliverAppBar(
       expandedHeight: 450,
       pinned: true,
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.white,
       flexibleSpace: FlexibleSpaceBar(
         collapseMode: CollapseMode.pin,
         background: Stack(
@@ -35,7 +35,7 @@ class _HomeState extends State<Home> {
             Container(
               decoration: const BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage(consts.navbarImage),
+                  image: AssetImage(consts.img28),
                   fit: BoxFit.cover,
                 ),
               ),
@@ -57,7 +57,7 @@ class _HomeState extends State<Home> {
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     Text(
-                      'Fresh Produce, Direct from Local Farmers',
+                      'Natural Skin Care, Made with Love',
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
@@ -68,12 +68,12 @@ class _HomeState extends State<Home> {
                     Row(
                       children: [
                         Text(
-                          "60K+ Farmers",
+                          "100% Organic Ingredients",
                           style: TextStyle(color: Colors.grey, fontSize: 16),
                         ),
                         SizedBox(width: 50),
                         Text(
-                          "240K Customers",
+                          "Crafted With Care",
                           style: TextStyle(color: Colors.grey, fontSize: 16),
                         ),
                       ],
@@ -98,15 +98,13 @@ class _HomeState extends State<Home> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  services[0]["description"]!,
+                  "Explore our range of skin care products made from natural, organic ingredients. Each product is crafted with care to nourish your skin.",
                   style: const TextStyle(color: Colors.grey, height: 1.4),
                 ),
                 const SizedBox(height: 20),
-                // _buildDetailsSection("Born", "April, 15th 1990, Paris, France"),
-                // _buildDetailsSection("Nationality", "British"),
                 const SizedBox(height: 20),
                 const Text(
-                  "We Sell Fresh Vegetables",
+                  "Organic Skin Care Products",
                   style: TextStyle(
                     color: Colors.grey,
                     fontSize: 20,
@@ -115,7 +113,7 @@ class _HomeState extends State<Home> {
                 ),
                 const SizedBox(height: 10),
                 const Text(
-                  "We sell fresh vegetables sourced directly from farmers, ensuring quality and freshness for every purchase.",
+                  "Our skin care products are free from harmful chemicals and are designed to nourish your skin with the purest ingredients.",
                   style: TextStyle(
                     color: Colors.grey,
                     fontSize: 16,
@@ -128,15 +126,15 @@ class _HomeState extends State<Home> {
                   child: ListView(
                     scrollDirection: Axis.horizontal,
                     children: [
-                      _makeVideo(consts.navbarImage),
-                      _makeVideo(consts.navbarImage),
-                      _makeVideo(consts.navbarImage),
+                      _makeProduct(consts.img3),
+                      _makeProduct(consts.img5),
+                      _makeProduct(consts.img8),
                     ],
                   ),
                 ),
                 const SizedBox(height: 20),
                 const Text(
-                  "We Deliver Directly From The Farmers",
+                  "Handcrafted Home-Made Products",
                   style: TextStyle(
                     color: Colors.grey,
                     fontSize: 20,
@@ -145,7 +143,7 @@ class _HomeState extends State<Home> {
                 ),
                 const SizedBox(height: 10),
                 const Text(
-                  "Fresh produce delivered straight from farmers to your doorstep—because quality and freshness matter!",
+                  "From soaps to candles, all of our home-made products are crafted with love and care to bring warmth and comfort to your home.",
                   style: TextStyle(
                     color: Colors.grey,
                     fontSize: 16,
@@ -158,9 +156,9 @@ class _HomeState extends State<Home> {
                   child: ListView(
                     scrollDirection: Axis.horizontal,
                     children: [
-                      _makeVideo(consts.navbarImage),
-                      _makeVideo(consts.navbarImage),
-                      _makeVideo(consts.navbarImage),
+                      _makeProduct(consts.img18),
+                      _makeProduct(consts.img11),
+                      _makeProduct(consts.img13),
                     ],
                   ),
                 ),
@@ -173,8 +171,7 @@ class _HomeState extends State<Home> {
     );
   }
 
-
-  Widget _makeVideo(String image) {
+  Widget _makeProduct(String image) {
     return AspectRatio(
       aspectRatio: 1.5 / 1,
       child: Container(

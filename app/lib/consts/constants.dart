@@ -1,4 +1,4 @@
-const String appName = "Farm Link AI";
+const String appName = "AI Skin Recommendation";
 
 
 

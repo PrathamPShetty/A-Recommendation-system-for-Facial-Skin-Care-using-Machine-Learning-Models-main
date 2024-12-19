@@ -6,41 +6,53 @@ import 'package:farm_link_ai/ui/SplashScreen/page.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:farm_link_ai/ui/Customer/recommedation/page.dart';
-
+import 'package:farm_link_ai/ui/Customer/resultpage/page.dart';
+import 'package:farm_link_ai/ui/Customer/help/page.dart';
 
 final GoRouter router = GoRouter(
-  initialLocation: '/welcome',
+  initialLocation: '/recommendation',
   debugLogDiagnostics: true,
   routes: [
     GoRoute(
-      path: '/recommendation',
-      builder: (BuildContext context, GoRouterState state) =>
-      const SplashScreen(),
+      path: '/',
+      builder: (BuildContext context, GoRouterState state) => const Home(),
       routes: [
         GoRoute(
-          path: '/',
+          path: '/welcome',
           builder: (BuildContext context, GoRouterState state) =>
-          const Home(),
+              const SplashScreen(),
         ),
         GoRoute(
           path: 'about',
-          builder: (BuildContext context, GoRouterState state) =>
-          const About(),
+          builder: (BuildContext context, GoRouterState state) => const About(),
         ),
         GoRoute(
           path: 'contact',
           builder: (BuildContext context, GoRouterState state) =>
-          const Contact(),
+              const Contact(),
         ),
         GoRoute(
-          path: 'recommendation',
-          builder: (BuildContext context, GoRouterState state) =>
-          const CameraPage(),
-        ),
+            path: 'recommendation',
+            builder: (BuildContext context, GoRouterState state) =>
+                const CameraPage(),
+            routes: [
+              GoRoute(
+                path: '/display',
+                builder: (BuildContext context, GoRouterState state) {
+                  final skinType = state.uri.queryParameters['skinType'] ?? '';
+                  final acneType = state.uri.queryParameters['acneType'] ?? '';
+                  return ResultPage(skinType: skinType, acneType: acneType);
+                },
+              ),
+            ]),
         GoRoute(
           path: 'product',
           builder: (BuildContext context, GoRouterState state) =>
-          const CustomerProduct(),
+              const CustomerProduct(),
+        ),  GoRoute(
+          path: 'help',
+          builder: (BuildContext context, GoRouterState state) =>
+              const Help(),
         ),
       ],
     ),

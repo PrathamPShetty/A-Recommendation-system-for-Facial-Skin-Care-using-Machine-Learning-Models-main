@@ -1,225 +1,76 @@
-import 'dart:io';
-import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'package:image_picker/image_picker.dart';
-import 'package:dio/dio.dart';
-import 'package:farm_link_ai/consts/host.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import '../../../core/cubit/customer/recomPage_cubit.dart';
+import 'package:farm_link_ai/ui/Customer/resultpage/page.dart';
 
-class CameraPage extends StatefulWidget {
+class CameraPage extends StatelessWidget {
   const CameraPage({Key? key}) : super(key: key);
 
   @override
-  State<CameraPage> createState() => _CameraPageState();
-}
-
-class _CameraPageState extends State<CameraPage> {
-  File? _selectedFile;
-  final ImagePicker _picker = ImagePicker();
-
-  // Function to pick an image from the gallery or camera
-  Future<void> _chooseFile() async {
-    final ImageSource? source = await showDialog<ImageSource>(
-      context: context,
-      builder: (context) {
-        return AlertDialog(
-          title: const Text('Select Source'),
-          actions: [
-            TextButton(
-              onPressed: () => Navigator.pop(context, ImageSource.camera),
-              child: const Text('Camera'),
-            ),
-            TextButton(
-              onPressed: () => Navigator.pop(context, ImageSource.gallery),
-              child: const Text('Gallery'),
-            ),
-          ],
-        );
-      },
-    );
-
-    if (source == null) return;
-
-    if (source == ImageSource.camera) {
-      // Take a picture using the camera
-      final XFile? image = await _picker.pickImage(source: source);
-      if (image != null) {
-        setState(() {
-          _selectedFile = File(image.path);
-        });
-      }
-    } else if (source == ImageSource.gallery) {
-      // Pick an image from the gallery
-      final XFile? image = await _picker.pickImage(source: source);
-      if (image != null) {
-        setState(() {
-          _selectedFile = File(image.path);
-        });
-      }
-    }
-  }
-
-  // Function to send the image file to the API and get the response
-  Future<void> _predictCrop() async {
-    if (_selectedFile == null) return;
-
-    try {
-      // Show loading indicator while waiting for the API response
-      showDialog(
-        context: context,
-        barrierDismissible: false,
-        builder: (context) => const Center(child: CircularProgressIndicator()),
-      );
-
-      // Prepare the API request
-      FormData formData = FormData.fromMap({
-        'image': await MultipartFile.fromFile(_selectedFile!.path),
-      });
-
-      Dio dio = Dio();
-      final response = await dio.post(
-        '$host/predict', // Replace with your actual API URL
-        data: formData,
-      );
-
-      // Close the loading dialog
-      Navigator.pop(context);
-
-      if (response.statusCode == 200) {
-        final data = response.data;
-
-        // Check if the response contains predicted crop and growing tips
-        if (data['success']) {
-          final String predictedCrop = data['prediction'];
-          final String pesticiderecommendation = data['pesticide_recommendation'];
-
-          // Show the result in a dialog
-          showDialog(
-            context: context,
-            builder: (context) {
-              return AlertDialog(
-                title: const Text('Prediction Result'),
-                content: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text('Predicted Crop: $predictedCrop'),
-                    const SizedBox(height: 10),
-                    Text('Growing Tips: $pesticiderecommendation'),
-                  ],
-                ),
-                actions: [
-                  TextButton(
-                    onPressed: () => Navigator.pop(context),
-                    child: const Text('OK'),
-                  ),
-                ],
-              );
-            },
-          );
-        } else {
-          // Handle failure
-          _showErrorDialog('Failed to predict crop');
-        }
-      } else {
-        // Handle error in response
-        _showErrorDialog('Failed to load prediction');
-      }
-    } catch (e) {
-      // Handle exception
-      Navigator.pop(context);
-      _showErrorDialog('An error occurred while predicting the crop.');
-    }
-  }
-
-  // Function to show error dialog
-  void _showErrorDialog(String message) {
-    showDialog(
-      context: context,
-      builder: (context) {
-        return AlertDialog(
-          title: const Text('Error'),
-          content: Text(message),
-          actions: [
-            TextButton(
-              onPressed: () => Navigator.pop(context),
-              child: const Text('OK'),
-            ),
-          ],
-        );
-      },
-    );
-  }
-
-  @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Detect Crop Disease'),
-      ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            // Title
-            const Text(
-              'Detect Crop Disease',
-              style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            const SizedBox(height: 20),
-
-            // File selection section
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Expanded(
-                  child: Text(
-                    _selectedFile != null
-                        ? _selectedFile!.path.split('/').last
-                        : 'No file chosen',
-                    style: const TextStyle(fontSize: 16),
-                    overflow: TextOverflow.ellipsis,
+    return BlocProvider(
+      create: (_) => SkinCareCubit(),
+      child: Scaffold(
+        appBar: AppBar(
+          title: const Text('AI Skin Recommendation'),
+        ),
+        body: BlocConsumer<SkinCareCubit, SkinCareState>(
+          listener: (context, state) {
+            if (state is SkinCareError) {
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(content: Text(state.message)),
+              );
+            } else if (state is SkinCareResult) {
+              // Navigate to ResultPage when results are available
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => ResultPage(
+                    skinType: state.skinType,
+                    acneType: state.acneType,
                   ),
                 ),
-                const SizedBox(width: 10),
-                ElevatedButton(
-                  onPressed: _chooseFile,
-                  child: const Text('Choose File'),
-                ),
-              ],
-            ),
-            const SizedBox(height: 20),
+              );
+            }
+          },
+          builder: (context, state) {
+            final cubit = context.read<SkinCareCubit>();
 
-            // Preview section
-            if (_selectedFile != null)
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+            return Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  const Text(
-                    'Selected File:',
-                    style: TextStyle(fontSize: 16),
+                  ElevatedButton(
+                    onPressed: cubit.chooseFile,
+                    child: const Text('Choose File'),
                   ),
-                  const SizedBox(height: 10),
-                  Image.file(
-                    _selectedFile!,
-                    height: 200,
-                    width: double.infinity,
-                    fit: BoxFit.cover,
+                  const SizedBox(height: 20),
+                  if (state is SkinCareFileSelected)
+                    Column(
+                      children: [
+                        const Text('Selected File:'),
+                        const SizedBox(height: 10),
+                        Image.file(
+                          state.file,
+                          height: 200,
+                          width: double.infinity,
+                          fit: BoxFit.cover,
+                        ),
+                      ],
+                    ),
+                  const SizedBox(height: 20),
+                  ElevatedButton(
+                    onPressed: cubit.recommendSkinCare,
+                    child: const Text('Get Recommendations'),
                   ),
+                  const SizedBox(height: 20),
+                  if (state is SkinCareLoading)
+                    const Center(child: CircularProgressIndicator()),
                 ],
               ),
-
-            const SizedBox(height: 20),
-
-            // Predict button
-            ElevatedButton(
-              onPressed: _predictCrop,
-              child: const Text('Predict Crop Disease'),
-            ),
-          ],
+            );
+          },
         ),
       ),
     );

@@ -41,7 +41,7 @@ class _NavBarState extends State<NavBar> {
         backgroundColor: Colors.white,
         leading: Builder(
           builder: (context) => IconButton(
-            icon: const Icon(Icons.menu, color: Color(0xFF6ADFEF)),
+            icon: const Icon(Icons.menu, color: Color(0xFF000000)),
             onPressed: () {
               Scaffold.of(context).openDrawer();
             },
@@ -54,7 +54,7 @@ class _NavBarState extends State<NavBar> {
           children: [
             const DrawerHeader(
               decoration: BoxDecoration(
-                color: Color(0xFFEDDD5E),
+                color: Color(0xFF5ECCED),
               ),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -92,6 +92,7 @@ class _NavBarState extends State<NavBar> {
       _drawerItem(context, Icons.contact_phone, 'Contact', '/contact'),
       _drawerItem(context, Icons.recommend, 'AI Recommendation', '/recommendation'),
       _drawerItem(context, Icons.shopping_cart, 'Product', '/product'),
+      _drawerItem(context, Icons.help, 'Help', '/help'),
     ];
   }
 
